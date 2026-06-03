@@ -1,0 +1,17 @@
+
+> soc-dashboard@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Failed to compile.
+
+TS7006: Parameter 'id' implicitly has an 'any' type.
+    61 |
+    62 |   // TODO: Implement actual toggle functionality
+  > 63 |   const toggleAlert = (id) => {
+       |                        ^^
+    64 |     setSelectedAlerts(prev =>
+    65 |       prev.includes(id) ? prev.filter(a => a !== id) : [...prev, id]
+    66 |     );
+
+
