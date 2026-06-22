@@ -2,6 +2,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 from typing import List, Dict, Any
+import asyncio
+import sys
+import subprocess
+from pathlib import Path
+
+# Add backend to path
+sys.path.insert(0, str(Path(__file__).parent))
 
 # Initialize FastAPI app
 app = FastAPI(
@@ -19,13 +26,79 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Import ingestion module
+from ingestion import get_logs, get_security_logs, get_log_count
+
+# Global variable to store collector process
+collector_process = None
+
 # TODO: Import and setup database connection
 # from .database import engine, SessionLocal, Base
 # Base.metadata.create_all(bind=engine)
 
-# TODO: Import detection and ingestion modules
+# TODO: Import detection module
 # from .detection import ThreatDetector
-# from .ingestion import LogIngestion
+
+
+@app.on_event("startup")
+async def startup_event():
+    """Start log collection and API on startup"""
+    global collector_process
+    
+    print("=" * 60)
+    print("SOC Dashboard API starting...")
+    print("MongoDB ingestion module loaded")
+    print("=" * 60)
+    
+    # Start the log collector process
+    try:
+        try :
+            command = "systemctl --version"
+            subprocess.run(command, shell=True, check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            print("✓ systemctl found. using journalctl for log collection.")
+            collector_path = Path(__file__).parent.parent / "collector" / "journalLogs.py"
+
+        except subprocess.CalledProcessError:
+            collector_path = Path(__file__).parent.parent / "collector" / "syslog.py"
+
+            print("✗ systemctl not found. falling back to syslog.")
+            return
+        collector_path = Path(__file__).parent.parent / "collector" / "journalLogs.py"
+        print(f"\n🔄 Starting log collector from: {collector_path}")
+        
+        collector_process = subprocess.Popen(
+            [sys.executable, str(collector_path)],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            text=True
+        )
+        print(f"✓ Log collector started (PID: {collector_process.pid})")
+        print("✓ Logs are being ingested into MongoDB in real-time")
+    except Exception as e:
+        print(f"✗ Failed to start log collector: {e}")
+
+
+@app.on_event("shutdown")
+async def shutdown_event():
+    """Clean up collector process on shutdown"""
+    global collector_process
+    
+    if collector_process:
+        print("\n" + "=" * 60)
+        print("Shutting down SOC Dashboard API...")
+        print("Terminating log collector...")
+        
+        try:
+            collector_process.terminate()
+            collector_process.wait(timeout=5)
+            print("✓ Log collector terminated")
+        except subprocess.TimeoutExpired:
+            collector_process.kill()
+            print("✓ Log collector killed")
+        except Exception as e:
+            print(f"✗ Error terminating collector: {e}")
+        
+        print("=" * 60)
 
 
 @app.get("/")
@@ -41,11 +114,11 @@ async def root():
 @app.get("/api/stats")
 async def get_stats() -> Dict[str, Any]:
     """
-    Get dashboard statistics
-    TODO: Connect to real threat detection engine
+    Get dashboard statistics from MongoDB logs
     """
+    log_count = get_log_count()
     return {
-        "total_events": 12847,
+        "total_events": log_count,
         "total_events_trend": 5.2,
         "active_alerts": 24,
         "active_alerts_trend": 12,
@@ -60,60 +133,21 @@ async def get_stats() -> Dict[str, Any]:
 @app.get("/api/alerts")
 async def get_alerts(limit: int = 50, offset: int = 0) -> Dict[str, Any]:
     """
-    Get recent security alerts
-    TODO: Query from database and apply real threat detection
+    Get recent security alerts from MongoDB
     """
+    security_logs = get_security_logs(limit=limit)
     alerts = [
         {
-            "id": 1,
-            "timestamp": "2024-01-15T14:35:22Z",
-            "severity": "critical",
-            "type": "SQL Injection",
-            "source": "192.168.1.105",
-            "destination": "10.0.1.50:3306",
-            "description": "Detected SQL injection pattern in HTTP request",
+            "id": idx,
+            "timestamp": log.get("INGESTION_TIMESTAMP", ""),
+            "severity": "high" if log.get("_COMM") == "sudo" else "medium",
+            "type": "SSH Login" if log.get("_SYSTEMD_UNIT") == "ssh.service" else "Sudo Command",
+            "source": log.get("_HOSTNAME", "unknown"),
+            "destination": "System",
+            "description": f"Log from {log.get('_COMM', 'unknown')} - {log.get('MESSAGE', '')}",
             "status": "open"
-        },
-        {
-            "id": 2,
-            "timestamp": "2024-01-15T14:28:15Z",
-            "severity": "high",
-            "type": "Port Scan",
-            "source": "203.45.67.89",
-            "destination": "10.0.0.0/24",
-            "description": "Systematic port scanning detected",
-            "status": "open"
-        },
-        {
-            "id": 3,
-            "timestamp": "2024-01-15T14:15:42Z",
-            "severity": "high",
-            "type": "Brute Force",
-            "source": "198.51.100.42",
-            "destination": "10.0.2.15:22",
-            "description": "Multiple failed SSH login attempts",
-            "status": "investigating"
-        },
-        {
-            "id": 4,
-            "timestamp": "2024-01-15T13:55:08Z",
-            "severity": "medium",
-            "type": "Anomalous Traffic",
-            "source": "10.0.3.200",
-            "destination": "8.8.8.8:53",
-            "description": "Unusual DNS query pattern detected",
-            "status": "investigating"
-        },
-        {
-            "id": 5,
-            "timestamp": "2024-01-15T13:42:31Z",
-            "severity": "low",
-            "type": "Policy Violation",
-            "source": "10.0.1.120",
-            "destination": "*.torrent.site",
-            "description": "Access to restricted website detected",
-            "status": "resolved"
         }
+        for idx, log in enumerate(security_logs, 1)
     ]
     
     return {
