@@ -1,6 +1,15 @@
 from faker import Faker
 import pexpect
+import getpass
+import os
 import random
+
+# Credentials for the "real user" attempts come from the environment and are
+# never stored in the repository:
+#   SIM_USER=casper SIM_PASSWORD='...' python simulation/linuxAuth.py
+# Without SIM_PASSWORD only the fake (failing) attempts are generated.
+SIM_USER = os.getenv("SIM_USER", getpass.getuser())
+SIM_PASSWORD = os.getenv("SIM_PASSWORD")
 
 
 
@@ -96,9 +105,11 @@ def main():
 
     for action in selected_actions:
         if action is generate_real_user_attempt:
-            action("casper", "casper321")##change on your system
+            if SIM_PASSWORD:
+                action(SIM_USER, SIM_PASSWORD)
         elif action is generate_real_sudo_attempt:
-            action("casper321")
+            if SIM_PASSWORD:
+                action(SIM_PASSWORD)
         else:
             action()
     

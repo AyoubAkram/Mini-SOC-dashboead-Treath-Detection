@@ -59,29 +59,75 @@ The frontend will start at `http://localhost:3000` and automatically open in you
 ```
 Mini-SOC-dashboead-Treath-Detection/
 ├── backend/                    # FastAPI backend
-│   ├── main.py                # Entry point
-│   ├── database.py            # Database connection
-│   ├── detection.py           # Threat detection logic
-│   ├── ingestion.py           # Data ingestion
-│   ├── models.py              # Data models
-│   └── utils.py               # Utilities
+│   ├── main.py                # Entry point and API endpoints
+│   ├── database.py            # MongoDB connection (lazy, optional)
+│   ├── models.py              # LogEntry / Alert schema (API contract)
+│   ├── parsers.py             # One parser per log source (8 sources + journald)
+│   ├── ingestion.py           # Normalizer, batch SHA-256 hashing, storage, queries
+│   ├── detection.py           # Threat detection logic (to do)
+│   └── utils.py               # Timestamps, hashing, IP helpers
+├── collector/                 # Live log collection
+│   ├── journalLogs.py         # journalctl follower
+│   ├── sylog.py               # /var/log/syslog follower
+│   ├── syslogListener.py      # UDP syslog listener (RFC 5424 / 3164)
+│   └── fileTail.py            # Live tailing of <log_source>.log files
+├── simulation/
+│   ├── linuxAuth.py           # Real ssh / sudo attempts on localhost
+│   └── logGenerator.py        # Synthetic logs for all sources + attack scenarios
+├── tests/                     # pytest suite (MongoDB mocked with mongomock)
 ├── frontend/                  # React frontend
-│   ├── public/
-│   │   └── index.html
-│   ├── src/
-│   │   ├── components/        # Reusable components
-│   │   │   ├── Alerts.jsx
-│   │   │   └── Stats.jsx
-│   │   ├── pages/
-│   │   │   └── Dashboard.jsx
-│   │   ├── styles/            # CSS styling
-│   │   ├── App.jsx
-│   │   └── index.js
-│   ├── package.json           # Node dependencies
-│   └── .gitignore
 ├── data/
-│   └── sample_logs.json
-└── requirements.txt           # Python dependencies
+│   └── sample_logs.json       # Small generated sample: [{log_source, raw}, ...]
+├── requirements.txt           # Python dependencies
+└── requirements-dev.txt       # + test dependencies
+```
+
+---
+
+## MongoDB
+
+The API stores everything in MongoDB at `mongodb://localhost:27017`, database `soc_dashboard`
+(override with `MONGO_URI` / `MONGO_DB`). The API still starts without it and returns empty results.
+
+On this machine MongoDB 8.0 is installed without root from the official tarball in
+`~/.local/opt/mongodb`, with its data in `~/.local/share/mongodb`, and runs as a user service
+bound to 127.0.0.1 only (no authentication, so do not expose the port):
+
+```bash
+systemctl --user status mongod      # start | stop | restart | disable
+```
+
+On another machine, install MongoDB the usual way (package, Docker, or the same tarball
+from https://www.mongodb.com/try/download/community).
+
+## Ingestion Pipeline
+
+```bash
+# Generate one hour of logs for all 8 sources, with 10 attack scenarios mixed in
+python simulation/logGenerator.py --seed 42            # writes data/generated/<log_source>.log
+python simulation/logGenerator.py --seed 42 --ingest   # ...and stores them in MongoDB
+python simulation/logGenerator.py --list               # list the attack scenarios
+
+# Real-time streaming: tail the files in one terminal, stream into them in another
+python collector/fileTail.py data/generated
+python simulation/logGenerator.py --stream --rate 20
+
+# UDP syslog listener (port 514 needs root, so 5514 by default)
+python collector/syslogListener.py --port 5514
+logger -n 127.0.0.1 -P 5514 -d --rfc5424 "hello from logger"
+```
+
+Every batch of ingested lines gets a SHA-256 hash; `GET /api/batches/{id}/verify`
+recomputes it to detect logs changed after ingestion.
+
+`SOC_COLLECTOR` controls the collector started with the API:
+`auto` (default), `journald`, `syslog` or `off`.
+
+## Tests
+
+```bash
+pip install -r requirements-dev.txt
+python -m pytest tests
 ```
 
 ---
@@ -132,16 +178,20 @@ npm run build
 
 ---
 
-## API Endpoints (to implement)
+## API Endpoints
 
-These endpoints are called from the dashboard:
-- `GET /api/stats` - Get dashboard statistics
-- `GET /api/alerts` - Get security alerts
-- `GET /api/threats` - Get active threats
-- `POST /api/alerts/{id}/acknowledge` - Acknowledge an alert
-- `POST /api/threats/{id}/investigate` - Start investigation
+- `GET /api/logs` - Normalized logs; filters: `log_source`, `event_type`, `source_ip`, `username`, `search`, `limit`, `offset`
+- `GET /api/stats` - Counts, trends against the previous period, severity counts and threat score
+- `GET /api/alerts` - Suspicious events shown as alerts until the detection engine exists; filters: `severity`, `status`, `search`, `limit`, `offset`
+- `GET /api/threats` - Unresolved IDS alerts
+- `GET /api/timeline` - Latest high and critical alerts
+- `GET /api/event-types` - Top event types and log sources
+- `GET /api/source-ips` - Top source IPs
+- `POST /api/alerts/{id}/acknowledge`, `POST|PATCH /api/alerts/{id}/resolve`, `POST /api/alerts/{id}/reopen`, `POST /api/threats/{id}/investigate` - Triage status, stored in MongoDB
+- `GET /api/batches/{id}/verify` - Integrity check of an ingested batch
 
-See the `// TODO:` comments in component files for implementation points.
+All dashboard endpoints accept `time_range` = `1h`, `24h` (default), `7d` or `30d`.
+The dashboard reads all of them and refreshes every 10 seconds.
 
 ---
 

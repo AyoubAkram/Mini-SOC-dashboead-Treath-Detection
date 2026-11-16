@@ -533,3 +533,41 @@
     flex-direction: column;
   }
 }
+
+/* Live data states */
+.data-message {
+  padding: var(--spacing-md);
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.data-message.error {
+  margin-bottom: var(--spacing-md);
+  border: 1px solid var(--color-critical);
+  border-radius: 6px;
+  color: var(--color-critical);
+  background-color: rgba(255, 51, 51, 0.08);
+}
+
+.gauge-value.high {
+  color: var(--color-high);
+}
+
+.gauge-value.medium {
+  color: var(--color-medium);
+}
+
+.gauge-value.low {
+  color: var(--color-low);
+}
+
+.timeline-dot.low {
+  background-color: var(--color-low);
+}
+
+.btn-action:disabled,
+.pagination-controls button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

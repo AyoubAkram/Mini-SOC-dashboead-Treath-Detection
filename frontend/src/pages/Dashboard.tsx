@@ -1,12 +1,69 @@
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import Stats from '../components/Stats';
 import Alerts from '../components/Alerts';
+import {
+  EventTypesResponse, SourceIpsResponse, StatsResponse, ThreatsResponse, TimeRange,
+  TimelineResponse, buildUrl, formatNumber, formatTime, request, timeAgo, titleCase, useApi
+} from '../api';
 import '../styles/dashboard.css';
 
+const REFRESH_SECONDS = 10;
+const THREAT_PAGE = 5;
+
+const RANGE_LABELS: Record<TimeRange, string> = {
+  '1h': 'last hour',
+  '24h': 'last 24 hours',
+  '7d': 'last 7 days',
+  '30d': 'last 30 days'
+};
+
+const SEVERITY_ICONS: Record<string, string> = {
+  critical: '🔴',
+  high: '🟠',
+  medium: '🟡',
+  low: '🟢'
+};
+
 const Dashboard = () => {
-  // TODO: Add state management for real-time data
   const [filterLevel, setFilterLevel] = useState<string>('all');
-  const [timeRange, setTimeRange] = useState<string>('1h');
+  const [timeRange, setTimeRange] = useState<TimeRange>('24h');
+  const [refreshKey, setRefreshKey] = useState<number>(0);
+  const [threatLimit, setThreatLimit] = useState<number>(THREAT_PAGE);
+
+  const refresh = useCallback(() => setRefreshKey((key) => key + 1), []);
+
+  // Poll the API until the WebSocket feed exists
+  useEffect(() => {
+    const timer = setInterval(refresh, REFRESH_SECONDS * 1000);
+    return () => clearInterval(timer);
+  }, [refresh]);
+
+  const range = { time_range: timeRange };
+  const stats = useApi<StatsResponse>(buildUrl('/api/stats', range), refreshKey);
+  const threats = useApi<ThreatsResponse>(
+    buildUrl('/api/threats', {
+      ...range,
+      limit: threatLimit,
+      severity: filterLevel === 'all' ? undefined : filterLevel
+    }),
+    refreshKey
+  );
+  const timeline = useApi<TimelineResponse>(buildUrl('/api/timeline', { ...range, limit: 6 }), refreshKey);
+  const eventTypes = useApi<EventTypesResponse>(buildUrl('/api/event-types', { ...range, limit: 6 }), refreshKey);
+  const sourceIps = useApi<SourceIpsResponse>(buildUrl('/api/source-ips', { ...range, limit: 6 }), refreshKey);
+
+  const investigate = async (id: string) => {
+    try {
+      await request(`/api/threats/${id}/investigate`, 'POST');
+    } finally {
+      refresh();
+    }
+  };
+
+  const counts = stats.data?.severity_counts;
+  const level = stats.data?.threat_level ?? 'low';
+  const threatList = threats.data?.threats ?? [];
+  const threatTotal = threats.data?.total ?? 0;
 
   return (
     <div className="dashboard">
@@ -18,26 +75,37 @@ const Dashboard = () => {
             <p className="subtitle">Security Operations Center - Real-time Threat Detection</p>
           </div>
           <div className="header-controls">
-            <select 
-              className="filter-select" 
+            <select
+              className="filter-select"
               value={timeRange}
-              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTimeRange(e.target.value)}
+              onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setTimeRange(e.target.value as TimeRange)}
             >
               <option value="1h">Last 1 Hour</option>
               <option value="24h">Last 24 Hours</option>
               <option value="7d">Last 7 Days</option>
               <option value="30d">Last 30 Days</option>
             </select>
-            <button className="btn-refresh">🔄 Refresh</button>
+            <button className="btn-refresh" onClick={refresh}>🔄 Refresh</button>
           </div>
         </div>
       </header>
 
       {/* Main Content */}
       <main className="dashboard-main">
+        {stats.error && (
+          <div className="data-message error">
+            Cannot reach the API ({stats.error}). Start the backend with: python backend/main.py
+          </div>
+        )}
+        {stats.data && !stats.data.database_connected && (
+          <div className="data-message error">
+            The API is running but MongoDB is not reachable, so no data can be shown.
+          </div>
+        )}
+
         {/* Stats Section */}
         <section className="stats-section">
-          <Stats />
+          <Stats stats={stats.data} rangeLabel={RANGE_LABELS[timeRange]} />
         </section>
 
         {/* Middle Section - Events & Alerts */}
@@ -48,19 +116,19 @@ const Dashboard = () => {
               <div className="card-header">
                 <h2>🎯 Active Threats</h2>
                 <div className="threat-filter">
-                  <button 
+                  <button
                     className={`threat-btn ${filterLevel === 'all' ? 'active' : ''}`}
                     onClick={() => setFilterLevel('all')}
                   >
                     All
                   </button>
-                  <button 
+                  <button
                     className={`threat-btn ${filterLevel === 'critical' ? 'active' : ''}`}
                     onClick={() => setFilterLevel('critical')}
                   >
                     🔴 Critical
                   </button>
-                  <button 
+                  <button
                     className={`threat-btn ${filterLevel === 'high' ? 'active' : ''}`}
                     onClick={() => setFilterLevel('high')}
                   >
@@ -69,40 +137,45 @@ const Dashboard = () => {
                 </div>
               </div>
               <div className="card-content">
-                {/* TODO: Add real threat data from backend API */}
+                {/* Unresolved alerts raised by the IDS sensor */}
                 <div className="threat-list">
-                  <div className="threat-item critical">
-                    <div className="threat-icon">🔴</div>
-                    <div className="threat-details">
-                      <h4>SQL Injection Attempt</h4>
-                      <p>Source: 192.168.1.105 | Target: /api/users</p>
-                      <span className="timestamp">2 minutes ago</span>
+                  {threatList.map((threat) => (
+                    <div key={threat.id} className={`threat-item ${threat.severity}`}>
+                      <div className="threat-icon">{SEVERITY_ICONS[threat.severity]}</div>
+                      <div className="threat-details">
+                        <h4>{threat.title}</h4>
+                        <p>Source: {threat.source} | Target: {threat.target}</p>
+                        <span className="timestamp">
+                          {timeAgo(threat.timestamp)}
+                          {threat.description ? ` · ${threat.description}` : ''}
+                        </span>
+                      </div>
+                      <button
+                        className="btn-action"
+                        disabled={threat.status === 'investigating'}
+                        onClick={() => investigate(threat.id)}
+                      >
+                        {threat.status === 'investigating' ? 'Investigating' : 'Investigate'}
+                      </button>
                     </div>
-                    <button className="btn-action">Investigate</button>
-                  </div>
-                  <div className="threat-item high">
-                    <div className="threat-icon">🟠</div>
-                    <div className="threat-details">
-                      <h4>Suspicious Port Scan</h4>
-                      <p>Source: 203.45.67.89 | Ports scanned: 1-1000</p>
-                      <span className="timestamp">15 minutes ago</span>
+                  ))}
+                  {threatList.length === 0 && (
+                    <div className="data-message">
+                      {threats.loading ? 'Loading threats...' : `No active threats in the ${RANGE_LABELS[timeRange]}.`}
                     </div>
-                    <button className="btn-action">Investigate</button>
-                  </div>
-                  <div className="threat-item medium">
-                    <div className="threat-icon">🟡</div>
-                    <div className="threat-details">
-                      <h4>Failed Login Attempts</h4>
-                      <p>User: admin@company.com | Attempts: 5</p>
-                      <span className="timestamp">28 minutes ago</span>
-                    </div>
-                    <button className="btn-action">Investigate</button>
-                  </div>
+                  )}
                 </div>
-                {/* TODO: Connect to backend for pagination and real-time updates */}
-                <div className="view-more">
-                  <button>View All Threats →</button>
-                </div>
+                {threatTotal > THREAT_PAGE && (
+                  <div className="view-more">
+                    {threatList.length < threatTotal ? (
+                      <button onClick={() => setThreatLimit(threatLimit + 20)}>
+                        View More Threats ({threatList.length} of {formatNumber(threatTotal)}) →
+                      </button>
+                    ) : (
+                      <button onClick={() => setThreatLimit(THREAT_PAGE)}>Show Fewer</button>
+                    )}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -115,24 +188,25 @@ const Dashboard = () => {
                 <h2>⚡ Threat Level</h2>
               </div>
               <div className="card-content threat-gauge">
-                {/* TODO: Add animated gauge component based on real threat score */}
                 <div className="gauge-container">
                   <div className="gauge-circle">
-                    <div className="gauge-value critical">7.8</div>
-                    <div className="gauge-label">HIGH</div>
+                    <div className={`gauge-value ${level}`}>
+                      {stats.data ? stats.data.threat_score : '—'}
+                    </div>
+                    <div className="gauge-label">{stats.data ? level.toUpperCase() : ''}</div>
                   </div>
                   <div className="gauge-stats">
                     <div className="stat-item">
                       <span className="label">Critical Events</span>
-                      <span className="value">3</span>
+                      <span className="value">{counts ? formatNumber(counts.critical) : '—'}</span>
                     </div>
                     <div className="stat-item">
                       <span className="label">High Events</span>
-                      <span className="value">12</span>
+                      <span className="value">{counts ? formatNumber(counts.high) : '—'}</span>
                     </div>
                     <div className="stat-item">
                       <span className="label">Medium Events</span>
-                      <span className="value">24</span>
+                      <span className="value">{counts ? formatNumber(counts.medium) : '—'}</span>
                     </div>
                   </div>
                 </div>
@@ -145,31 +219,20 @@ const Dashboard = () => {
                 <h2>📊 Event Timeline</h2>
               </div>
               <div className="card-content timeline">
-                {/* TODO: Add real-time event timeline with WebSocket connection */}
-                <div className="timeline-item">
-                  <div className="timeline-dot critical"></div>
-                  <div className="timeline-content">
-                    <h4>Critical Alert</h4>
-                    <p>Malware detection - C2 communication</p>
-                    <span>14:32:05</span>
+                {/* TODO: Replace polling with the WebSocket alert feed */}
+                {(timeline.data?.timeline ?? []).map((event) => (
+                  <div key={event.id} className="timeline-item">
+                    <div className={`timeline-dot ${event.severity}`}></div>
+                    <div className="timeline-content">
+                      <h4>{event.title}</h4>
+                      <p>{event.description}</p>
+                      <span>{formatTime(event.timestamp)}</span>
+                    </div>
                   </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-dot high"></div>
-                  <div className="timeline-content">
-                    <h4>Unauthorized Access</h4>
-                    <p>Multiple failed authentication attempts</p>
-                    <span>14:28:15</span>
-                  </div>
-                </div>
-                <div className="timeline-item">
-                  <div className="timeline-dot medium"></div>
-                  <div className="timeline-content">
-                    <h4>Anomalous Behavior</h4>
-                    <p>Large data exfiltration detected</p>
-                    <span>14:15:42</span>
-                  </div>
-                </div>
+                ))}
+                {timeline.data?.timeline.length === 0 && (
+                  <div className="data-message">No high or critical events in the {RANGE_LABELS[timeRange]}.</div>
+                )}
               </div>
             </div>
           </div>
@@ -177,7 +240,7 @@ const Dashboard = () => {
 
         {/* Bottom Section - Alerts Table */}
         <section className="alerts-section">
-          <Alerts />
+          <Alerts timeRange={timeRange} refreshKey={refreshKey} onChange={refresh} />
         </section>
 
         {/* Bottom Section - Additional Analytics */}
@@ -188,36 +251,19 @@ const Dashboard = () => {
               <h2>📈 Top Event Types</h2>
             </div>
             <div className="card-content">
-              {/* TODO: Add bar chart visualization component */}
               <div className="event-types-list">
-                <div className="event-type">
-                  <div className="event-name">Network Traffic Anomalies</div>
-                  <div className="event-bar">
-                    <div className="bar-fill" style={{width: '85%'}}></div>
+                {(eventTypes.data?.event_types ?? []).map((eventType) => (
+                  <div key={eventType.name} className="event-type">
+                    <div className="event-name">{titleCase(eventType.name)}</div>
+                    <div className="event-bar">
+                      <div className="bar-fill" style={{width: `${eventType.percentage}%`}}></div>
+                    </div>
+                    <div className="event-count">{formatNumber(eventType.count)} events</div>
                   </div>
-                  <div className="event-count">1,245 events</div>
-                </div>
-                <div className="event-type">
-                  <div className="event-name">Failed Authentication</div>
-                  <div className="event-bar">
-                    <div className="bar-fill" style={{width: '62%'}}></div>
-                  </div>
-                  <div className="event-count">892 events</div>
-                </div>
-                <div className="event-type">
-                  <div className="event-name">Malware Detection</div>
-                  <div className="event-bar">
-                    <div className="bar-fill" style={{width: '45%'}}></div>
-                  </div>
-                  <div className="event-count">648 events</div>
-                </div>
-                <div className="event-type">
-                  <div className="event-name">Data Exfiltration</div>
-                  <div className="event-bar">
-                    <div className="bar-fill" style={{width: '38%'}}></div>
-                  </div>
-                  <div className="event-count">547 events</div>
-                </div>
+                ))}
+                {eventTypes.data?.event_types.length === 0 && (
+                  <div className="data-message">No events in the {RANGE_LABELS[timeRange]}.</div>
+                )}
               </div>
             </div>
           </div>
@@ -230,27 +276,18 @@ const Dashboard = () => {
             <div className="card-content">
               {/* TODO: Add geolocation mapping for source IPs */}
               <div className="source-list">
-                <div className="source-item">
-                  <div className="source-info">
-                    <div className="ip">192.168.1.105</div>
-                    <div className="location">Internal Network</div>
+                {(sourceIps.data?.source_ips ?? []).map((source) => (
+                  <div key={source.ip} className="source-item">
+                    <div className="source-info">
+                      <div className="ip">{source.ip}</div>
+                      <div className="location">{source.location}</div>
+                    </div>
+                    <div className="event-count">{formatNumber(source.event_count)} events</div>
                   </div>
-                  <div className="event-count">234 events</div>
-                </div>
-                <div className="source-item">
-                  <div className="source-info">
-                    <div className="ip">203.45.67.89</div>
-                    <div className="location">Unknown Location</div>
-                  </div>
-                  <div className="event-count">156 events</div>
-                </div>
-                <div className="source-item">
-                  <div className="source-info">
-                    <div className="ip">10.0.0.50</div>
-                    <div className="location">Internal Network</div>
-                  </div>
-                  <div className="event-count">98 events</div>
-                </div>
+                ))}
+                {sourceIps.data?.source_ips.length === 0 && (
+                  <div className="data-message">No source IPs in the {RANGE_LABELS[timeRange]}.</div>
+                )}
               </div>
             </div>
           </div>
