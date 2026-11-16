@@ -65,6 +65,10 @@ class LogGenerator:
         self.start = start or (datetime.now(timezone.utc) - self.duration)
         self.events: List[Event] = []
         self._zeek_uid = 0
+        # Stable populations, so normal entities show repeated, ordinary behaviour
+        self.workstations = [f"10.0.{self.rng.randint(1, 3)}.{self.rng.randint(10, 250)}"
+                             for _ in range(30)]
+        self.visitors = [self.fake.ipv4_public() for _ in range(60)]
 
     # -- helpers -----------------------------------------------------------
 
@@ -79,9 +83,12 @@ class LogGenerator:
         return f"{self.rng.choice(ATTACKER_NETS)}.{self.rng.randint(2, 254)}"
 
     def internal_ip(self) -> str:
-        return f"10.0.{self.rng.randint(1, 3)}.{self.rng.randint(10, 250)}"
+        return self.rng.choice(self.workstations)
 
     def external_ip(self) -> str:
+        # most traffic comes from returning visitors, the rest from new addresses
+        if self.rng.random() < 0.7:
+            return self.rng.choice(self.visitors)
         return self.fake.ipv4_public()
 
     def _port(self) -> int:
@@ -215,8 +222,8 @@ class LogGenerator:
     def _normal_ids(self) -> None:
         sid, message, classification, priority, proto, dport = self.rng.choice([
             (2100366, "GPL ICMP_INFO PING *NIX", "Misc activity", 3, "ICMP", 0),
-            (2013028, "ET POLICY curl User-Agent Outbound", "Attempted Information Leak", 2, "TCP", 80),
-            (2012647, "ET POLICY Dropbox.com Offsite File Backup in Use", "Potential Corporate Privacy Violation", 1, "TCP", 443),
+            (2013028, "ET POLICY curl User-Agent Outbound", "Attempted Information Leak", 3, "TCP", 80),
+            (2012647, "ET POLICY Dropbox.com Offsite File Backup in Use", "Potential Corporate Privacy Violation", 2, "TCP", 443),
         ])
         self.ids(self._when(), sid, message, classification, priority, proto,
                  self.internal_ip(), self._port(), self.external_ip(), dport)
@@ -279,7 +286,20 @@ class LogGenerator:
         self.auth(ts, host, "sshd", f"Accepted password for root from {ip} port {self._port()} ssh2")
         self.auth(ts + timedelta(milliseconds=50), host, "sshd",
                   "pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)")
-        return {"scenario": "brute_force", "source_ip": ip, "attempts": attempts}
+        return {"scenario": "brute_force", "source_ip": ip, "attempts": attempts,
+                "target_users": list(COMMON_TARGETS)}
+
+    def distributed_brute_force(self) -> Dict:
+        """Several addresses each guessing a few passwords: too slow for a per-IP threshold."""
+        ips = [self.attacker_ip() for _ in range(6)]
+        start = self._attack_start(300)
+        for ip in ips:
+            ts = start + timedelta(seconds=self.rng.uniform(0, 60))
+            for _ in range(self.rng.randint(8, 12)):
+                ts += timedelta(seconds=self.rng.uniform(5, 20))
+                self.auth(ts, "bastion", "sshd",
+                          f"Failed password for root from {ip} port {self._port()} ssh2")
+        return {"scenario": "distributed_brute_force", "source_ips": ips, "target_users": ["root"]}
 
     def port_scan(self) -> Dict:
         """One address probing many ports in a few seconds."""
@@ -345,7 +365,8 @@ class LogGenerator:
         ts += timedelta(seconds=45)
         self.windows(ts, 4720, host, TargetUserName="helpdesk2", TargetDomainName="CORP",
                      SubjectUserName=victim, SubjectDomainName="CORP")
-        return {"scenario": "account_takeover", "source_ip": ip, "username": victim}
+        return {"scenario": "account_takeover", "source_ip": ip, "username": victim,
+                "target_users": list(INTERNAL_USERS) + ["helpdesk2"]}
 
     def lateral_movement(self) -> Dict:
         """A compromised internal host logging in to several others in a short time."""
@@ -420,7 +441,9 @@ class LogGenerator:
 
     @property
     def scenarios(self) -> Dict[str, Callable[[], Dict]]:
-        return {"brute_force": self.brute_force, "port_scan": self.port_scan,
+        return {"brute_force": self.brute_force,
+                "distributed_brute_force": self.distributed_brute_force,
+                "port_scan": self.port_scan,
                 "sql_injection": self.sql_injection,
                 "privilege_escalation": self.privilege_escalation,
                 "account_takeover": self.account_takeover,

@@ -30,10 +30,11 @@ def free_udp_port():
 
 def test_syslog_listener_receives_udp_messages(db):
     port = free_udp_port()
-    stop = threading.Event()
+    stop, ready = threading.Event(), threading.Event()
     batcher = ingestion.LogBatcher("syslog", max_size=50, max_age=0.2)
-    thread = threading.Thread(target=syslogListener.serve, args=("127.0.0.1", port, batcher, stop), daemon=True)
+    thread = threading.Thread(target=syslogListener.serve, args=("127.0.0.1", port, batcher, stop, ready), daemon=True)
     thread.start()
+    assert ready.wait(timeout=5)
     messages = [
         b"<38>1 2026-06-14T15:16:01Z bastion sshd 4321 - - Failed password for root from 203.0.113.7 port 22 ssh2",
         b"<30>Jun 14 15:16:02 web-01 cron[77]: (root) CMD (run-parts /etc/cron.hourly)",
@@ -42,14 +43,9 @@ def test_syslog_listener_receives_udp_messages(db):
     ]
     try:
         with socket.socket(socket.AF_INET, socket.SOCK_DGRAM) as client:
-            for _ in range(40):  # the listener may need a moment to bind
-                client.sendto(messages[0], ("127.0.0.1", port))
-                if wait_for(lambda: db.logs.count_documents({}) >= 1, timeout=0.25):
-                    break
-            db.logs.delete_many({})
             for message in messages:
                 client.sendto(message, ("127.0.0.1", port))
-        assert wait_for(lambda: db.logs.count_documents({}) == 5)
+        assert wait_for(lambda: db.logs.count_documents({}) == 5, timeout=10)
     finally:
         stop.set()
         thread.join(timeout=3)

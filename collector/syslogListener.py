@@ -26,14 +26,16 @@ def decode(datagram: bytes):
     return [line for line in text.splitlines() if line.strip()]
 
 
-def serve(host: str = "0.0.0.0", port: int = 5514, batcher=None, stop_event=None):
-    """Listen until stop_event is set (forever when it is None)."""
+def serve(host: str = "0.0.0.0", port: int = 5514, batcher=None, stop_event=None, ready_event=None):
+    """Listen until stop_event is set (forever when it is None). ready_event is set once bound."""
     batcher = batcher or LogBatcher("syslog")
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
     sock.bind((host, port))
     sock.settimeout(0.5)
     print(f"✓ Syslog listener on udp://{host}:{sock.getsockname()[1]}")
+    if ready_event is not None:
+        ready_event.set()
     try:
         while stop_event is None or not stop_event.is_set():
             try:

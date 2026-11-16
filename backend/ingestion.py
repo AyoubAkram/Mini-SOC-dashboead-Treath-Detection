@@ -435,6 +435,48 @@ def alert_severity_counts(**filters) -> Dict[str, int]:
             for severity in _SEVERITY_CONDITIONS}
 
 
+def count_alert_types(limit: int = 10, **filters) -> List[Dict[str, Any]]:
+    """Alerts per event type: [{'value': 'login_failed', 'count': 42}, ...]"""
+    logs = _logs()
+    if logs is None:
+        return []
+    try:
+        pipeline = [
+            {"$match": alert_query(**filters)},
+            {"$group": {"_id": "$event_type", "count": {"$sum": 1}}},
+            {"$sort": {"count": -1, "_id": 1}},
+            {"$limit": limit},
+        ]
+        return [{"value": row["_id"], "count": row["count"]} for row in logs.aggregate(pipeline)]
+    except Exception as e:
+        print(f"Error counting alert types: {e}")
+        return []
+
+
+def alert_volume(since, until, bucket_minutes: int) -> List[Dict[str, Any]]:
+    """
+    Alerts per time bucket and severity, oldest first, with empty buckets
+    included: [{'time': datetime, 'critical': 0, 'high': 2, 'medium': 5, 'low': 0}, ...]
+    """
+    step = bucket_minutes * 60
+    first = int(utils.to_utc(since).timestamp()) // step * step
+    last = int(utils.to_utc(until).timestamp()) // step * step
+    buckets = {start: {"critical": 0, "high": 0, "medium": 0, "low": 0}
+               for start in range(first, last + 1, step)}
+    logs = _logs()
+    if logs is not None:
+        try:
+            cursor = logs.find(alert_query(since=since, until=until),
+                               {"timestamp": 1, "event_type": 1, "extra.priority": 1})
+            for doc in cursor:
+                start = int(utils.to_utc(doc["timestamp"]).timestamp()) // step * step
+                if start in buckets:
+                    buckets[start][alert_severity(doc)] += 1
+        except Exception as e:
+            print(f"Error computing alert volume: {e}")
+    return [dict(counts, time=utils.parse_epoch(start)) for start, counts in sorted(buckets.items())]
+
+
 def set_alert_status(log_id: str, status: str) -> bool:
     """
     Set the triage status of a log shown as an alert. Returns False when the

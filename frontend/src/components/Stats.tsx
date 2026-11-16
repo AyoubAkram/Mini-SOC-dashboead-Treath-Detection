@@ -7,11 +7,20 @@ interface StatsProps {
   rangeLabel: string;
 }
 
-const formatTrend = (trend: number | null | undefined): string => {
-  if (trend === null || trend === undefined) {
-    return '—';
+const Trend = ({ value }: { value: number | null | undefined }) => {
+  if (value === undefined) {
+    return null;
   }
-  return `${trend > 0 ? '+' : ''}${trend}%`;
+  if (value === null) {
+    return <span className="trend" title="No data in the previous period">new</span>;
+  }
+  // More events, alerts or failed logins is never good news
+  const direction = value > 0 ? 'up' : value < 0 ? 'down' : '';
+  return (
+    <span className={`trend ${direction}`} title="Change against the previous period">
+      {value > 0 ? '+' : ''}{value}%
+    </span>
+  );
 };
 
 const Stats = ({ stats, rangeLabel }: StatsProps) => {
@@ -20,67 +29,45 @@ const Stats = ({ stats, rangeLabel }: StatsProps) => {
 
   const cards = [
     {
-      id: 1,
-      label: 'Total Events',
+      label: 'Total events',
       value: value(stats?.total_events),
       trend: stats?.total_events_trend,
-      icon: '📊',
-      color: 'blue',
-      description: `Events ingested, ${rangeLabel}`
+      color: 'var(--accent)',
+      note: `Ingested in the ${rangeLabel}`
     },
     {
-      id: 2,
-      label: 'Active Alerts',
+      label: 'Active alerts',
       value: value(stats?.active_alerts),
       trend: stats?.active_alerts_trend,
-      icon: '🚨',
-      color: 'red',
-      description: 'Unresolved security events'
+      color: 'var(--critical)',
+      note: 'Unresolved security events'
     },
     {
-      id: 3,
-      label: 'Failed Logins',
+      label: 'ML anomalies',
+      value: value(stats?.ml_alerts),
+      trend: undefined,
+      color: 'var(--ml)',
+      note: 'Behaviour the model found unusual'
+    },
+    {
+      label: 'Failed logins',
       value: value(stats?.failed_logins),
       trend: stats?.failed_logins_trend,
-      icon: '🔐',
-      color: 'green',
-      description: `${value(stats?.unique_source_ips)} distinct source IPs seen overall`
-    },
-    {
-      id: 4,
-      label: 'Threat Score',
-      value: stats ? `${stats.threat_score}/10` : '—',
-      trend: undefined,
-      icon: '⚠️',
-      color: 'orange',
-      description: 'Severity-weighted share of alerts'
+      color: 'var(--high)',
+      note: `${value(stats?.unique_source_ips)} distinct source IPs overall`
     }
   ];
 
   return (
-    <div className="stats-container">
+    <div className="kpis">
       {cards.map((card) => (
-        <div key={card.id} className={`stat-card stat-${card.color}`}>
-          <div className="stat-header">
-            <div className="stat-icon">{card.icon}</div>
-            {card.trend !== undefined && (
-              <div
-                className="stat-trend"
-                title="Change against the previous period"
-                style={{
-                  // More events, alerts or failed logins is never good news
-                  color: card.trend === null ? '#a0aab8' : card.trend > 0 ? '#ff6b6b' : '#51cf66'
-                }}
-              >
-                {formatTrend(card.trend)}
-              </div>
-            )}
+        <div key={card.label} className="card kpi" style={{ '--kpi-color': card.color } as React.CSSProperties}>
+          <div className="kpi-top">
+            <span className="kpi-label">{card.label}</span>
+            <Trend value={card.trend} />
           </div>
-          <div className="stat-body">
-            <div className="stat-label">{card.label}</div>
-            <div className="stat-value">{card.value}</div>
-            <div className="stat-description">{card.description}</div>
-          </div>
+          <div className="kpi-value">{card.value}</div>
+          <div className="kpi-note">{card.note}</div>
         </div>
       ))}
     </div>

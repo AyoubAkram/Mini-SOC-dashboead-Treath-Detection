@@ -10,10 +10,12 @@ import pytest
 from fastapi.testclient import TestClient
 
 os.environ["SOC_COLLECTOR"] = "off"  # never start the journalctl collector in tests
+os.environ["ML_DETECT_INTERVAL"] = "0"  # no background detection in tests
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
 import dataBase as database  # noqa: E402
 import ingestion  # noqa: E402
 import main  # noqa: E402
+import ml  # noqa: E402
 
 from datetime import datetime, timedelta, timezone  # noqa: E402
 
@@ -200,3 +202,78 @@ def test_endpoints_survive_without_database(client, monkeypatch):
     assert client.post("/api/alerts/x/resolve").status_code == 404
     assert client.get("/api/event-types").json() == {"event_types": [], "log_sources": []}
     assert client.get("/api/source-ips").json() == {"source_ips": []}
+
+
+def test_alert_volume_and_attack_types(seeded):
+    client, _ = seeded
+    ingestion.ingest_batch(ids_lines(), "ids")
+    body = client.get("/api/alert-volume", params={"time_range": "1h"}).json()
+    assert body["bucket_minutes"] == 5 and 12 <= len(body["buckets"]) <= 13
+    assert set(body["buckets"][0]) == {"time", "critical", "high", "medium", "low", "ml"}
+    assert [b["time"] for b in body["buckets"]] == sorted(b["time"] for b in body["buckets"])
+    totals = {k: sum(b[k] for b in body["buckets"]) for k in ("critical", "high", "medium", "low", "ml")}
+    assert totals == {"critical": 1, "high": 2, "medium": 3, "low": 0, "ml": 0}
+    assert client.get("/api/alert-volume").json()["bucket_minutes"] == 60
+    assert client.get("/api/alert-volume", params={"time_range": "x"}).json()["bucket_minutes"] == 60
+    types = client.get("/api/attack-types").json()["attack_types"]
+    assert types[0] == {"name": "ids_alert", "count": 3} and {"name": "account_created", "count": 1} in types
+    stats = client.get("/api/stats").json()
+    assert stats["rule_alerts"] == 6 and stats["ml_alerts"] == 0
+
+
+def test_ml_endpoints(client, tmp_path, monkeypatch):
+    import sys as _sys
+    _sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "simulation"))
+    from logGenerator import LogGenerator
+    monkeypatch.setattr(ml, "MODEL_DIR", tmp_path / "models")
+
+    assert client.get("/api/ml/models").json() == {"active": None, "versions": []}
+    assert client.post("/api/ml/train").status_code == 409            # no data yet
+    assert client.post("/api/ml/train", params={"contamination": 0.9}).status_code == 422
+    assert client.post("/api/ml/detect").json()["reason"] == "no trained model"
+    assert client.get("/api/ml/anomalies").json() == {"anomalies": [], "total": 0}
+    assert client.get("/api/ml/entities").json() == {"entities": []}
+
+    start = datetime.now(timezone.utc) - timedelta(hours=3, minutes=5)
+    normal = LogGenerator(seed=31, start=start, duration_minutes=120)
+    normal.generate(normal=1600, scenarios=[])
+    for source, lines in normal.by_source().items():
+        ingestion.ingest_batch(lines, source)
+    assert client.post("/api/ml/train").json()["version"] == "v1"
+    attack = LogGenerator(seed=32, start=start + timedelta(hours=2), duration_minutes=60)
+    attack.workstations, attack.visitors = normal.workstations, normal.visitors
+    truth = attack.generate(normal=600, scenarios=["port_scan"])
+    for source, lines in attack.by_source().items():
+        ingestion.ingest_batch(lines, source)
+    scanner = truth[0]["source_ip"]
+
+    summary = client.post("/api/ml/detect", params={"hours": 1.2}).json()
+    assert summary["ran"] and summary["anomalies"] >= 1
+    body = client.get("/api/ml/anomalies").json()
+    assert body["total"] == summary["anomalies"]
+    top = next(a for a in body["anomalies"] if a["entity"] == scanner)
+    assert top["anomaly_score"] > 0.9 and top["detection_type"] == "ml-detected" and top["explanation"]
+    assert client.get("/api/stats").json()["ml_alerts"] == summary["anomalies"]
+    volume = client.get("/api/alert-volume", params={"time_range": "24h"}).json()["buckets"]
+    assert sum(b["ml"] for b in volume) == summary["anomalies"]
+
+    assert client.patch(f"/api/ml/anomalies/{top['id']}/resolve").json() == {"alert_id": top["id"], "resolved": True}
+    assert client.get("/api/ml/anomalies", params={"resolved": False}).json()["total"] == summary["anomalies"] - 1
+    assert client.post("/api/ml/anomalies/nope/resolve").status_code == 404
+
+    entities = client.get("/api/ml/entities", params={"entity_type": "ip", "limit": 100}).json()["entities"]
+    assert len(client.get("/api/ml/entities", params={"limit": 3}).json()["entities"]) == 3
+    ranked = {e["entity"]: e["risk_score"] for e in entities}
+    assert scanner in ranked and ranked[scanner] > 40
+    profile = client.get(f"/api/entities/ip/{scanner}").json()
+    assert profile["risk"]["risk_score"] == ranked[scanner] and profile["total_logs"] > 100
+    assert all(type(c["weight"]) is float for c in top["explanation"])
+    assert len(profile["recent_logs"]) == 25 and profile["anomalies"]
+    assert client.get("/api/entities/ip/8.8.8.8").status_code == 404
+    assert client.get("/api/entities/host/x").status_code == 404
+    visitor = client.get(f"/api/entities/ip/{normal.visitors[0]}")
+    assert visitor.status_code == 200 and visitor.json()["total_logs"] > 0
+
+    assert client.post("/api/ml/train").json()["version"] == "v2"
+    assert client.post("/api/ml/models/v1/activate").json()["active"] == "v1"
+    assert client.post("/api/ml/models/v7/activate").status_code == 404

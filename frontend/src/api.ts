@@ -19,6 +19,8 @@ export interface StatsResponse {
   severity_counts: Record<Severity, number>;
   threat_score: number;
   threat_level: Severity;
+  rule_alerts: number;
+  ml_alerts: number;
 }
 
 export interface Alert {
@@ -78,7 +80,117 @@ export interface SourceIpsResponse {
   source_ips: { ip: string; location: string; event_count: number; threat_level: string }[];
 }
 
-type Params = Record<string, string | number | undefined | null>;
+export interface VolumeBucket {
+  time: string;
+  critical: number;
+  high: number;
+  medium: number;
+  low: number;
+  ml: number;
+}
+
+export interface VolumeResponse {
+  bucket_minutes: number;
+  buckets: VolumeBucket[];
+}
+
+export interface AttackTypesResponse {
+  attack_types: { name: string; count: number }[];
+}
+
+export interface Explanation {
+  feature: string;
+  label: string;
+  value: number;
+  typical: number;
+  weight: number;
+}
+
+export interface Anomaly {
+  id: string;
+  timestamp: string;
+  entity_type: 'ip' | 'user';
+  entity: string;
+  description: string;
+  severity: 'CRITICAL' | 'HIGH' | 'MEDIUM' | 'LOW';
+  anomaly_score: number;
+  explanation: Explanation[];
+  cluster: string | null;
+  baseline_z: number | null;
+  model_version: string;
+  resolved: boolean;
+}
+
+export interface AnomaliesResponse {
+  anomalies: Anomaly[];
+  total: number;
+}
+
+export interface EntityRisk {
+  id: string;
+  entity_type: 'ip' | 'user';
+  entity: string;
+  risk_score: number;
+  components: { ml: number; baseline: number; rules: number; coordinated: number };
+  anomalous_windows: number;
+  windows: number;
+  events: number;
+  top_reasons: string[];
+  last_seen: string;
+}
+
+export interface EntitiesResponse {
+  entities: EntityRisk[];
+}
+
+export interface LogEntry {
+  id: string;
+  timestamp: string;
+  source_ip: string | null;
+  username: string | null;
+  event_type: string;
+  log_source: string;
+  message: string;
+  raw: string;
+  host: string | null;
+  dest_ip: string | null;
+  dest_port: number | null;
+}
+
+export interface LogsResponse {
+  logs: LogEntry[];
+  total: number;
+}
+
+export interface EntityProfile {
+  entity_type: 'ip' | 'user';
+  entity: string;
+  risk: EntityRisk | null;
+  baseline: { windows: number; mean: Record<string, number> } | null;
+  anomalies: Anomaly[];
+  recent_logs: LogEntry[];
+  total_logs: number;
+}
+
+export interface ModelVersion {
+  version: string;
+  trained_at: string;
+  params: { contamination: number; n_estimators: number };
+  samples: Record<string, number>;
+  note: string;
+}
+
+export interface ModelsResponse {
+  active: string | null;
+  versions: ModelVersion[];
+}
+
+export interface EntityRef {
+  type: 'ip' | 'user';
+  id: string;
+}
+
+type Params = Record<string, string | number | boolean | undefined | null>;
 
 export const buildUrl = (path: string, params: Params = {}): string => {
   const query = new URLSearchParams();
@@ -91,7 +203,7 @@ export const buildUrl = (path: string, params: Params = {}): string => {
   return text ? `${path}?${text}` : path;
 };
 
-export async function request<T>(url: string, method: 'GET' | 'POST' = 'GET'): Promise<T> {
+export async function request<T>(url: string, method: 'GET' | 'POST' | 'PATCH' = 'GET'): Promise<T> {
   const response = await fetch(url, { method });
   if (!response.ok) {
     throw new Error(`${method} ${url} failed (${response.status})`);
@@ -174,3 +286,36 @@ export const timeAgo = (iso: string): string => {
 /** "login_failed" -> "Login Failed" */
 export const titleCase = (name: string): string =>
   name.replace(/_/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase());
+
+export const riskLevel = (score: number): Severity => {
+  if (score >= 70) {
+    return 'critical';
+  }
+  if (score >= 50) {
+    return 'high';
+  }
+  return score >= 25 ? 'medium' : 'low';
+};
+
+export const SEVERITY_COLORS: Record<string, string> = {
+  critical: '#f2526b',
+  high: '#f79a3e',
+  medium: '#e8c547',
+  low: '#3fbf8f',
+  ml: '#a889ff',
+  accent: '#6c8cff'
+};
+
+export interface PageProps {
+  timeRange: TimeRange;
+  refreshKey: number;
+  refresh: () => void;
+  openEntity: (entity: EntityRef) => void;
+}
+
+export const RANGE_LABELS: Record<TimeRange, string> = {
+  '1h': 'last hour',
+  '24h': 'last 24 hours',
+  '7d': 'last 7 days',
+  '30d': 'last 30 days'
+};

@@ -123,6 +123,34 @@ recomputes it to detect logs changed after ingestion.
 `SOC_COLLECTOR` controls the collector started with the API:
 `auto` (default), `journald`, `syslog` or `off`.
 
+## ML / UEBA
+
+Behavioral anomaly detection per IP and per user (Isolation Forest, baselines, DBSCAN, risk
+scores). The reasoning and the measured false-positive rate are in `docs/ml-approach.md`.
+
+```bash
+python simulation/demoData.py              # WARNING: resets the database, then loads demo data,
+                                           # trains a model and runs detection
+python backend/ml.py train --hours 24      # new model version from the stored logs
+python backend/ml.py detect --hours 1      # score recent logs
+python simulation/mlEvaluation.py          # detection and false-positive rates on synthetic attacks
+```
+
+Models are saved under `models/` (not in git). The API runs detection every 60 seconds once
+a model exists (`ML_DETECT_INTERVAL`, 0 disables it).
+
+Endpoints: `POST /api/ml/train`, `POST /api/ml/detect`, `GET /api/ml/models`,
+`POST /api/ml/models/{version}/activate`, `GET /api/ml/anomalies`, `GET /api/ml/entities`,
+`GET /api/entities/{ip|user}/{id}`, plus `GET /api/alert-volume` and `GET /api/attack-types`
+for the charts.
+
+## Dashboard
+
+Four views, linked by URL hash: Overview (`#overview`), Alerts (`#alerts`), Threat hunting
+(`#hunting`) and Entities & ML (`#entities`). Clicking any IP or user opens its profile.
+Charts use Recharts; `frontend/.npmrc` sets `legacy-peer-deps` because the project's
+TypeScript version is newer than react-scripts expects.
+
 ## Tests
 
 ```bash
