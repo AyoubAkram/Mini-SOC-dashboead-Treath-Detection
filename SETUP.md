@@ -144,10 +144,31 @@ Endpoints: `POST /api/ml/train`, `POST /api/ml/detect`, `GET /api/ml/models`,
 `GET /api/entities/{ip|user}/{id}`, plus `GET /api/alert-volume` and `GET /api/attack-types`
 for the charts.
 
+## Packet capture (Scapy)
+
+```bash
+python simulation/pcapSimulation.py --seed 42                           # writes data/generated/capture.pcap
+python collector/pcapReader.py data/generated/capture.pcap --ingest     # pcap -> Zeek-style records -> MongoDB
+```
+
+The capture holds normal traffic plus a SYN port scan, DNS tunneling, beaconing and an
+exfiltration upload. Packets are only written to a file, never sent.
+
+## MITRE ATT&CK, attack stories and reports
+
+`backend/mitre.py` tags event-based alerts and ML alerts with a tactic and technique
+(a provisional mapping; detection rules can set their own tags).
+
+- `GET /api/mitre` - coverage matrix: detectable techniques per tactic and their alert counts
+- `GET /api/entities/{ip|user}/{id}/story` - the entity's alerts as ordered ATT&CK stages
+- `GET /api/entities/{ip|user}/{id}/report.pdf` - incident report as a PDF
+
 ## Dashboard
 
-Four views, linked by URL hash: Overview (`#overview`), Alerts (`#alerts`), Threat hunting
-(`#hunting`) and Entities & ML (`#entities`). Clicking any IP or user opens its profile.
+Five views, linked by URL hash: Overview (`#overview`), Alerts (`#alerts`), Threat hunting
+(`#hunting`), Entities & ML (`#entities`) and ATT&CK coverage (`#mitre`). Clicking any IP or
+user opens its profile with the attack story and a PDF report button; `?entity=ip:1.2.3.4`
+opens a profile directly.
 Charts use Recharts; `frontend/.npmrc` sets `legacy-peer-deps` because the project's
 TypeScript version is newer than react-scripts expects.
 

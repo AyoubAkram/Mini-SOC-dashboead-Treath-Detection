@@ -5,10 +5,11 @@ import Dashboard from './pages/Dashboard';
 import AlertsPage from './pages/AlertsPage';
 import Hunting from './pages/Hunting';
 import Entities from './pages/Entities';
+import Mitre from './pages/Mitre';
 import { EntityRef, ModelsResponse, StatsResponse, TimeRange, buildUrl, formatNumber, useApi } from './api';
 import './styles/index.css';
 
-type Page = 'overview' | 'alerts' | 'hunting' | 'entities';
+type Page = 'overview' | 'alerts' | 'hunting' | 'entities' | 'mitre';
 
 const REFRESH_SECONDS = 10;
 
@@ -16,7 +17,8 @@ const PAGES: { id: Page; label: string; icon: string; title: string; subtitle: s
   { id: 'overview', label: 'Overview', icon: 'overview', title: 'Security overview', subtitle: 'What is happening across all log sources' },
   { id: 'alerts', label: 'Alerts', icon: 'alerts', title: 'Alerts', subtitle: 'Triage rule-based and ML-detected alerts' },
   { id: 'hunting', label: 'Threat hunting', icon: 'search', title: 'Threat hunting', subtitle: 'Search every normalized log' },
-  { id: 'entities', label: 'Entities & ML', icon: 'entities', title: 'Entities and ML', subtitle: 'Risk per IP and user, and the model behind it' }
+  { id: 'entities', label: 'Entities & ML', icon: 'entities', title: 'Entities and ML', subtitle: 'Risk per IP and user, and the model behind it' },
+  { id: 'mitre', label: 'ATT&CK coverage', icon: 'grid', title: 'MITRE ATT&CK coverage', subtitle: 'Which techniques can be detected, and which were seen' }
 ];
 
 const RANGES: TimeRange[] = ['1h', '24h', '7d', '30d'];
@@ -33,7 +35,11 @@ function App() {
   };
   const [timeRange, setTimeRange] = useState<TimeRange>('24h');
   const [refreshKey, setRefreshKey] = useState<number>(0);
-  const [entity, setEntity] = useState<EntityRef | null>(null);
+  // ?entity=ip:203.0.113.7 opens that entity's profile directly (shareable link)
+  const [entity, setEntity] = useState<EntityRef | null>(() => {
+    const [type, ...rest] = (new URLSearchParams(window.location.search).get('entity') ?? '').split(':');
+    return (type === 'ip' || type === 'user') && rest.length > 0 ? { type, id: rest.join(':') } : null;
+  });
 
   const refresh = useCallback(() => setRefreshKey((key) => key + 1), []);
   const closeEntity = useCallback(() => setEntity(null), []);
@@ -126,6 +132,7 @@ function App() {
           {page === 'alerts' && <AlertsPage {...pageProps} stats={stats.data} />}
           {page === 'hunting' && <Hunting {...pageProps} />}
           {page === 'entities' && <Entities {...pageProps} />}
+          {page === 'mitre' && <Mitre {...pageProps} />}
         </main>
       </div>
 

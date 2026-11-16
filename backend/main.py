@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Response
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime, timedelta
 from typing import List, Dict, Any, Optional
@@ -33,9 +33,11 @@ from ingestion import (
     get_logs, get_log_count, count_by_event_type, count_by_log_source,
     top_source_ips, count_unique_source_ips, verify_batch,
     get_alert_events, count_alert_events, alert_severity_counts, set_alert_status,
-    count_alert_types, alert_volume,
+    count_alert_types, alert_volume, count_ids_signatures,
 )
 import ml
+import mitre
+import report
 from dataBase import is_connected
 from models import LogSource
 from utils import is_private_ip, utcnow
@@ -197,7 +199,8 @@ def to_alert(log: Dict[str, Any]) -> Dict[str, Any]:
         "destination": destination,
         "username": log.get("username"),
         "description": log.get("message", ""),
-        "status": log["status"]
+        "status": log["status"],
+        **mitre.describe(mitre.technique_for_event(log))
     }
 
 
@@ -527,6 +530,93 @@ async def get_entity(entity_type: str, entity: str) -> Dict[str, Any]:
     if not profile["total_logs"] and not profile["risk"] and not profile["anomalies"]:
         raise HTTPException(status_code=404, detail="Entity not found")
     return profile
+
+
+def entity_story(entity_type: str, entity: str) -> Dict[str, Any]:
+    """Alerts of one entity (event-based and ML), tagged and ordered into attack stages."""
+    field = "source_ip" if entity_type == "ip" else "username"
+    events = [
+        {
+            "timestamp": log["timestamp"],
+            "mitre_technique": mitre.technique_for_event(log),
+            "detection": "rule",
+            "severity": log["severity"],
+            "description": log.get("message", "")
+        }
+        for log in get_alert_events(limit=5000, **{field: entity})
+    ]
+    profile = ml.get_entity_profile(entity_type, entity) or {"anomalies": []}
+    events += [
+        {
+            "timestamp": anomaly["timestamp"],
+            "mitre_technique": anomaly.get("mitre_technique"),
+            "detection": "ml",
+            "severity": anomaly.get("severity", "low"),
+            "description": anomaly.get("description", "")
+        }
+        for anomaly in profile["anomalies"]
+    ]
+    return mitre.build_story(events)
+
+
+def story_to_api(story: Dict[str, Any]) -> Dict[str, Any]:
+    iso = lambda value: value.isoformat() if value else None
+    return {
+        "stages": [dict(stage, first_seen=iso(stage["first_seen"]), last_seen=iso(stage["last_seen"]))
+                   for stage in story["stages"]],
+        "tactics": story["tactics"],
+        "alerts": story["alerts"],
+        "first_seen": iso(story["first_seen"]),
+        "last_seen": iso(story["last_seen"])
+    }
+
+
+@app.get("/api/entities/{entity_type}/{entity}/story")
+async def get_entity_story(entity_type: str, entity: str) -> Dict[str, Any]:
+    """
+    Attack story of an entity: its alerts grouped into MITRE ATT&CK stages in time order
+    """
+    if entity_type not in ml.ENTITY_TYPES:
+        raise HTTPException(status_code=404, detail="Unknown entity type")
+    return story_to_api(entity_story(entity_type, entity))
+
+
+@app.get("/api/entities/{entity_type}/{entity}/report.pdf")
+async def get_entity_report(entity_type: str, entity: str) -> Response:
+    """
+    Incident report for an entity as a PDF file
+    """
+    profile = await get_entity(entity_type, entity)
+    pdf = await asyncio.to_thread(report.build_entity_report, profile,
+                                  entity_story(entity_type, entity))
+    filename = "argus-report-" + "".join(c if c.isalnum() or c in ".-" else "_" for c in entity) + ".pdf"
+    return Response(content=pdf, media_type="application/pdf",
+                    headers={"Content-Disposition": f'attachment; filename="{filename}"'})
+
+
+@app.get("/api/mitre")
+async def get_mitre_matrix(time_range: str = "24h") -> Dict[str, Any]:
+    """
+    MITRE ATT&CK coverage matrix: detectable techniques per tactic and their alert counts
+    """
+    since = range_start(time_range)
+    rule_counts: Dict[str, int] = {}
+    for row in count_alert_types(limit=100, since=since):
+        technique = mitre.EVENT_TECHNIQUES.get(row["value"])
+        if technique:
+            rule_counts[technique] = rule_counts.get(technique, 0) + row["count"]
+    for row in count_ids_signatures(since=since):
+        technique = mitre.technique_for_signature(row["value"])
+        if technique:
+            rule_counts[technique] = rule_counts.get(technique, 0) + row["count"]
+    tactics = mitre.build_matrix(rule_counts, ml.count_anomaly_techniques(since=since))
+    covered = [t for tactic in tactics for t in tactic["techniques"]]
+    return {
+        "tactics": tactics,
+        "techniques_covered": len(covered),
+        "techniques_seen": sum(1 for t in covered if t["rule_alerts"] or t["ml_alerts"]),
+        "tactics_covered": sum(1 for tactic in tactics if tactic["techniques"])
+    }
 
 
 def update_alert_status(alert_id: str, status: str) -> Dict[str, Any]:

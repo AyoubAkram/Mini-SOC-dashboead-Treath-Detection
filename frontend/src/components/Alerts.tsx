@@ -176,7 +176,14 @@ const Alerts = ({ timeRange, refreshKey, refresh, openEntity, pageSize = 10, tit
                 </td>
                 <td className="mono muted nowrap">{formatDateTime(alert.timestamp)}</td>
                 <td><span className={`badge ${alert.severity}`}>{alert.severity}</span></td>
-                <td className="nowrap">{alert.type}</td>
+                <td className="nowrap">
+                  {alert.type}
+                  {alert.mitre_technique && (
+                    <div className="list-sub" title={`${alert.mitre_tactic}: ${alert.mitre_name}`}>
+                      {alert.mitre_technique} · {alert.mitre_tactic}
+                    </div>
+                  )}
+                </td>
                 <td>
                   {isIp(alert.source) ? (
                     <button className="link" onClick={() => openEntity({ type: 'ip', id: alert.source })}>

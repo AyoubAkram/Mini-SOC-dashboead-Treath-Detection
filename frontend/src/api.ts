@@ -34,6 +34,9 @@ export interface Alert {
   username: string | null;
   description: string;
   status: AlertStatus;
+  mitre_technique: string | null;
+  mitre_tactic: string | null;
+  mitre_name: string | null;
 }
 
 export interface AlertsResponse {
@@ -116,6 +119,8 @@ export interface Anomaly {
   anomaly_score: number;
   explanation: Explanation[];
   cluster: string | null;
+  mitre_technique: string | null;
+  mitre_tactic: string | null;
   baseline_z: number | null;
   model_version: string;
   resolved: boolean;
@@ -183,6 +188,42 @@ export interface ModelVersion {
 export interface ModelsResponse {
   active: string | null;
   versions: ModelVersion[];
+}
+
+export interface MitreTechnique {
+  id: string;
+  name: string;
+  rules: boolean;
+  ml: boolean;
+  rule_alerts: number;
+  ml_alerts: number;
+}
+
+export interface MitreResponse {
+  tactics: { id: string; name: string; alerts: number; techniques: MitreTechnique[] }[];
+  techniques_covered: number;
+  techniques_seen: number;
+  tactics_covered: number;
+}
+
+export interface StoryStage {
+  technique: string;
+  name: string;
+  tactic: string;
+  count: number;
+  first_seen: string;
+  last_seen: string;
+  severity: Severity;
+  detections: string[];
+  example: string;
+}
+
+export interface StoryResponse {
+  stages: StoryStage[];
+  tactics: string[];
+  alerts: number;
+  first_seen: string | null;
+  last_seen: string | null;
 }
 
 export interface EntityRef {

@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import Icon from './Icons';
 import {
-  EntityProfile, EntityRef, SEVERITY_COLORS, buildUrl, formatDateTime, formatNumber, riskLevel, titleCase, useApi
+  EntityProfile, EntityRef, SEVERITY_COLORS, StoryResponse, buildUrl, formatDateTime, formatNumber, formatTime,
+  riskLevel, titleCase, useApi
 } from '../api';
 
 interface EntityDrawerProps {
@@ -21,6 +22,8 @@ const COMPONENTS: { key: 'ml' | 'baseline' | 'rules' | 'coordinated'; label: str
 const EntityDrawer = ({ entity, refreshKey, onClose }: EntityDrawerProps) => {
   const url = buildUrl(`/api/entities/${entity.type}/${encodeURIComponent(entity.id)}`);
   const { data, error, loading } = useApi<EntityProfile>(url, refreshKey);
+  const story = useApi<StoryResponse>(`${url}/story`, refreshKey);
+  const stages = story.data?.stages ?? [];
 
   useEffect(() => {
     const onKey = (event: KeyboardEvent) => {
@@ -46,7 +49,14 @@ const EntityDrawer = ({ entity, refreshKey, onClose }: EntityDrawerProps) => {
             <h2 style={{ marginTop: 8 }}>{entity.id}</h2>
             {data && <p className="muted" style={{ fontSize: 12.5 }}>{formatNumber(data.total_logs)} logs in total</p>}
           </div>
-          <button className="icon-btn" onClick={onClose} title="Close"><Icon name="close" size={16} /></button>
+          <div className="row-actions">
+            {data && (
+              <a className="btn small" href={`${url}/report.pdf`} download title="Download the incident report as PDF">
+                <Icon name="download" size={14} /> PDF report
+              </a>
+            )}
+            <button className="icon-btn" onClick={onClose} title="Close"><Icon name="close" size={16} /></button>
+          </div>
         </div>
 
         <div className="drawer-body">
@@ -79,6 +89,32 @@ const EntityDrawer = ({ entity, refreshKey, onClose }: EntityDrawerProps) => {
                   <p className="muted">Not scored yet. Scores appear after the next ML detection run.</p>
                 )}
               </section>
+
+              {stages.length > 0 && (
+                <section className="drawer-section">
+                  <h3>Attack story · {stages.length} stage{stages.length === 1 ? '' : 's'} across {story.data?.tactics.length} ATT&CK tactic{story.data?.tactics.length === 1 ? '' : 's'}</h3>
+                  <div className="story">
+                    {stages.map((stage, index) => (
+                      <div key={`${stage.technique}-${stage.first_seen}-${index}`} className="story-stage">
+                        <span className={`story-node ${stage.severity}`}>{index + 1}</span>
+                        <div className="story-body">
+                          <div className="story-tactic">{stage.tactic}</div>
+                          <div className="story-technique">
+                            <span className="mono">{stage.technique}</span> {stage.name}
+                          </div>
+                          <div className="list-sub" style={{ whiteSpace: 'normal' }}>
+                            {formatTime(stage.first_seen)}
+                            {stage.last_seen !== stage.first_seen ? `–${formatTime(stage.last_seen)}` : ''}
+                            {' · '}{formatNumber(stage.count)} alert{stage.count === 1 ? '' : 's'}
+                            {' · '}{stage.detections.filter(Boolean).map((d) => (d === 'ml' ? 'ML' : 'rules')).join(' + ')}
+                          </div>
+                          <div className="story-example" title={stage.example}>{stage.example}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </section>
+              )}
 
               {data.anomalies.length > 0 && (
                 <section className="drawer-section">

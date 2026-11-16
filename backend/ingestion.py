@@ -379,7 +379,8 @@ def alert_severity(doc: Dict[str, Any]) -> str:
 
 def alert_query(since=None, until=None, severity: Optional[str] = None,
                 status: Optional[str] = None, search: Optional[str] = None,
-                ids_only: bool = False) -> Dict[str, Any]:
+                ids_only: bool = False, source_ip: Optional[str] = None,
+                username: Optional[str] = None) -> Dict[str, Any]:
     """
     MongoDB query selecting the logs shown as alerts.
     status: open | investigating | resolved | unresolved
@@ -389,7 +390,7 @@ def alert_query(since=None, until=None, severity: Optional[str] = None,
         conditions.append({"event_type": IDS})
     else:
         conditions.append({"event_type": {"$in": HIGH_EVENT_TYPES + MEDIUM_EVENT_TYPES + [IDS]}})
-    time_range = build_query(since=since, until=until)
+    time_range = build_query(since=since, until=until, source_ip=source_ip, username=username)
     if time_range:
         conditions.append(time_range)
     if severity in _SEVERITY_CONDITIONS:
@@ -450,6 +451,24 @@ def count_alert_types(limit: int = 10, **filters) -> List[Dict[str, Any]]:
         return [{"value": row["_id"], "count": row["count"]} for row in logs.aggregate(pipeline)]
     except Exception as e:
         print(f"Error counting alert types: {e}")
+        return []
+
+
+def count_ids_signatures(limit: int = 200, **filters) -> List[Dict[str, Any]]:
+    """IDS alerts per signature: [{'value': 'ET SCAN ...', 'count': 12}, ...]"""
+    logs = _logs()
+    if logs is None:
+        return []
+    try:
+        pipeline = [
+            {"$match": alert_query(ids_only=True, **filters)},
+            {"$group": {"_id": "$message", "count": {"$sum": 1}}},
+            {"$sort": {"count": -1, "_id": 1}},
+            {"$limit": limit},
+        ]
+        return [{"value": row["_id"], "count": row["count"]} for row in logs.aggregate(pipeline)]
+    except Exception as e:
+        print(f"Error counting IDS signatures: {e}")
         return []
 
 

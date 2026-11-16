@@ -253,6 +253,9 @@ def test_ml_endpoints(client, tmp_path, monkeypatch):
     assert body["total"] == summary["anomalies"]
     top = next(a for a in body["anomalies"] if a["entity"] == scanner)
     assert top["anomaly_score"] > 0.9 and top["detection_type"] == "ml-detected" and top["explanation"]
+    assert (top["mitre_technique"], top["mitre_tactic"]) == ("T1595", "Reconnaissance")
+    seen = {t["id"]: t["ml_alerts"] for tactic in client.get("/api/mitre").json()["tactics"] for t in tactic["techniques"]}
+    assert seen["T1595"] >= 1
     assert client.get("/api/stats").json()["ml_alerts"] == summary["anomalies"]
     volume = client.get("/api/alert-volume", params={"time_range": "24h"}).json()["buckets"]
     assert sum(b["ml"] for b in volume) == summary["anomalies"]
@@ -277,3 +280,36 @@ def test_ml_endpoints(client, tmp_path, monkeypatch):
     assert client.post("/api/ml/train").json()["version"] == "v2"
     assert client.post("/api/ml/models/v1/activate").json()["active"] == "v1"
     assert client.post("/api/ml/models/v7/activate").status_code == 404
+
+
+def test_mitre_matrix_story_and_report(seeded):
+    client, _ = seeded
+    ingestion.ingest_batch(ids_lines(), "ids")
+    alerts = client.get("/api/alerts").json()["alerts"]
+    tags = {a["event_type"]: (a["mitre_technique"], a["mitre_tactic"]) for a in alerts if a["event_type"] != "ids_alert"}
+    assert tags == {"login_failed": ("T1110", "Credential Access"), "account_created": ("T1136", "Persistence")}
+    sqli = next(a for a in alerts if "SQL" in a["description"])
+    assert (sqli["mitre_technique"], sqli["mitre_name"]) == ("T1190", "Exploit Public-Facing Application")
+    assert next(a for a in alerts if "PING" in a["description"])["mitre_technique"] is None
+
+    body = client.get("/api/mitre").json()
+    assert len(body["tactics"]) == 14 and body["techniques_covered"] == 11 and body["techniques_seen"] == 3
+    counts = {t["id"]: t["rule_alerts"] for tactic in body["tactics"] for t in tactic["techniques"]}
+    # 2 failed logins + the "SSH Scan" signature, 1 created account, 1 SQL injection signature
+    assert (counts["T1110"], counts["T1136"], counts["T1190"], counts["T1041"]) == (3, 1, 1, 0)
+    assert client.get("/api/mitre", params={"time_range": "1h"}).json()["techniques_seen"] == 3
+
+    story = client.get("/api/entities/ip/203.0.113.7/story").json()
+    assert [s["technique"] for s in story["stages"]] == ["T1110", "T1190", "T1110"]
+    assert story["tactics"] == ["Initial Access", "Credential Access"] and story["alerts"] == 4
+    assert story["stages"][0]["count"] == 2 and story["first_seen"] < story["last_seen"]
+    assert client.get("/api/entities/ip/8.8.8.8/story").json()["stages"] == []
+    assert client.get("/api/entities/host/x/story").status_code == 404
+
+    response = client.get("/api/entities/ip/203.0.113.7/report.pdf")
+    assert response.status_code == 200 and response.headers["content-type"] == "application/pdf"
+    assert response.content[:5] == b"%PDF-"
+    assert response.headers["content-disposition"] == 'attachment; filename="argus-report-203.0.113.7.pdf"'
+    assert client.get("/api/entities/ip/8.8.8.8/report.pdf").status_code == 404
+    user = client.get("/api/entities/user/root/report.pdf")
+    assert user.status_code == 200 and user.content[:5] == b"%PDF-"

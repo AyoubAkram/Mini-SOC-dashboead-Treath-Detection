@@ -247,3 +247,172 @@
     width: 100%;
   }
 }
+
+/* Attack story (entity drawer) */
+
+.story {
+  display: flex;
+  flex-direction: column;
+}
+
+.story-stage {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  padding-bottom: 16px;
+}
+
+.story-stage::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 26px;
+  bottom: 0;
+  width: 2px;
+  background: var(--border-strong);
+}
+
+.story-stage:last-child {
+  padding-bottom: 0;
+}
+
+.story-stage:last-child::before {
+  display: none;
+}
+
+.story-node {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  background: var(--surface-3);
+}
+
+.story-node.critical { color: var(--critical); background: var(--critical-soft); box-shadow: 0 0 0 1px var(--critical); }
+.story-node.high { color: var(--high); background: var(--high-soft); box-shadow: 0 0 0 1px var(--high); }
+.story-node.medium { color: var(--medium); background: var(--medium-soft); box-shadow: 0 0 0 1px var(--medium); }
+
+.story-body {
+  min-width: 0;
+  flex: 1;
+}
+
+.story-tactic {
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.story-technique {
+  font-weight: 580;
+}
+
+.story-example {
+  margin-top: 4px;
+  font-size: 12px;
+  color: var(--text-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.btn {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ATT&CK matrix */
+
+.matrix {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(150px, 1fr);
+  gap: 10px;
+  padding: 4px 18px 18px;
+  overflow-x: auto;
+}
+
+.matrix-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.matrix-tactic {
+  padding: 9px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--surface-3);
+  font-size: 12px;
+  font-weight: 620;
+  line-height: 1.3;
+}
+
+.matrix-tactic span {
+  display: block;
+  margin-top: 2px;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 400;
+  color: var(--text-faint);
+}
+
+.matrix-tactic.empty {
+  background: transparent;
+  border: 1px dashed var(--border);
+  color: var(--text-faint);
+}
+
+.technique {
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+  font-size: 12px;
+}
+
+.technique.seen {
+  border-color: rgba(242, 82, 107, 0.55);
+  background: var(--critical-soft);
+}
+
+.technique-id {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.technique-name {
+  margin: 2px 0 8px;
+  font-weight: 560;
+  line-height: 1.3;
+}
+
+.technique-count {
+  margin-bottom: 7px;
+  font-size: 18px;
+  font-weight: 680;
+  font-variant-numeric: tabular-nums;
+}
+
+.technique .reasons {
+  gap: 4px;
+}
+
+.technique .badge {
+  padding: 1px 6px;
+  font-size: 9.5px;
+}
+
+.matrix-gap {
+  padding: 10px;
+  font-size: 11.5px;
+  color: var(--text-faint);
+}

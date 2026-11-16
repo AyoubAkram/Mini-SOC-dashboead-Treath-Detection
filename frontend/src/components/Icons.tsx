@@ -15,6 +15,7 @@ const paths: Record<string, React.ReactNode> = {
   download: <><path d="M12 4v11" /><path d="m7.5 11 4.5 4.5 4.5-4.5" /><path d="M5 20h14" /></>,
   cpu: <><rect x="6" y="6" width="12" height="12" rx="2" /><rect x="10" y="10" width="4" height="4" /><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4" /></>,
   link: <><circle cx="6" cy="12" r="2.5" /><circle cx="18" cy="6" r="2.5" /><circle cx="18" cy="18" r="2.5" /><path d="m8.2 10.9 7.6-3.8M8.2 13.1l7.6 3.8" /></>,
+  grid: <><rect x="3" y="3" width="5" height="18" rx="1.2" /><rect x="9.5" y="3" width="5" height="11" rx="1.2" /><rect x="16" y="3" width="5" height="15" rx="1.2" /></>,
   chevron: <path d="m9 6 6 6-6 6" />
 };
 

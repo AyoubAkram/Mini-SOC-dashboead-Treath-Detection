@@ -32,10 +32,11 @@ from sklearn.ensemble import IsolationForest
 from sklearn.preprocessing import StandardScaler
 
 try:
-    from . import dataBase as database, utils
+    from . import dataBase as database, mitre, utils
     from .models import Alert, DetectionType, Severity, document_to_api
 except ImportError:  # running with backend/ on sys.path (python backend/main.py)
     import dataBase as database
+    import mitre
     import utils
     from models import Alert, DetectionType, Severity, document_to_api
 
@@ -558,6 +559,9 @@ def anomaly_to_alert(row: Dict[str, Any], model_version: str) -> Dict[str, Any]:
         source_ip=row["entity"] if row["entity_type"] == "ip" else None,
         rule_name="ml_behavioral_anomaly", description=describe(row), severity=_severity(row),
         detection_type=DetectionType.ML_DETECTED, anomaly_score=row["anomaly_score"],
+        **{key: value for key, value in mitre.describe(
+            mitre.technique_for_anomaly(row["explanation"], row["entity"])).items()
+           if key != "mitre_name"},
     )
     doc = alert.to_document()
     doc.update(entity_type=row["entity_type"], entity=row["entity"], features=row["features"],
@@ -673,6 +677,16 @@ def get_anomalies(limit: int = 50, offset: int = 0, since: Optional[datetime] = 
 def count_anomalies(since: Optional[datetime] = None, resolved: Optional[bool] = None) -> int:
     alerts = database.get_collection(ANOMALIES_COLLECTION)
     return 0 if alerts is None else alerts.count_documents(_ml_query(since, resolved))
+
+
+def count_anomaly_techniques(since: Optional[datetime] = None) -> Dict[str, int]:
+    """ML alerts per MITRE technique: {'T1110': 4, ...}"""
+    alerts = database.get_collection(ANOMALIES_COLLECTION)
+    if alerts is None:
+        return {}
+    pipeline = [{"$match": _ml_query(since)},
+                {"$group": {"_id": "$mitre_technique", "count": {"$sum": 1}}}]
+    return {row["_id"]: row["count"] for row in alerts.aggregate(pipeline) if row["_id"]}
 
 
 def set_anomaly_resolved(alert_id: str, resolved: bool = True) -> bool:
