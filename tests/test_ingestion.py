@@ -157,7 +157,7 @@ def test_log_batcher_flushes_on_size_age_and_close(db):
 
 
 def test_database_retries_after_cooldown(monkeypatch):
-    from backend import database
+    from backend import dataBase as database
     database.reset_connection()
     monkeypatch.setattr(database, "MONGO_URI", "mongodb://127.0.0.1:1/?serverSelectionTimeoutMS=200")
     assert database.get_db() is None            # connection refused

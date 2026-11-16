@@ -11,7 +11,7 @@ from fastapi.testclient import TestClient
 
 os.environ["SOC_COLLECTOR"] = "off"  # never start the journalctl collector in tests
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "backend"))
-import database  # noqa: E402
+import dataBase as database  # noqa: E402
 import ingestion  # noqa: E402
 import main  # noqa: E402
 

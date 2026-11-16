@@ -11,10 +11,10 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple
 
 try:
-    from . import database, parsers, utils
+    from . import dataBase as database, parsers, utils
     from .models import EventType, LogBatch, LogEntry, LogSource, document_to_api
 except ImportError:  # running with backend/ on sys.path (python backend/main.py)
-    import database
+    import dataBase as database
     import parsers
     import utils
     from models import EventType, LogBatch, LogEntry, LogSource, document_to_api

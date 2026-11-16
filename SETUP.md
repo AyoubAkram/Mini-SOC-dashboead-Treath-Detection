@@ -60,7 +60,7 @@ The frontend will start at `http://localhost:3000` and automatically open in you
 Mini-SOC-dashboead-Treath-Detection/
 ├── backend/                    # FastAPI backend
 │   ├── main.py                # Entry point and API endpoints
-│   ├── database.py            # MongoDB connection (lazy, optional)
+│   ├── dataBase.py            # MongoDB connection (lazy, optional)
 │   ├── models.py              # LogEntry / Alert schema (API contract)
 │   ├── parsers.py             # One parser per log source (8 sources + journald)
 │   ├── ingestion.py           # Normalizer, batch SHA-256 hashing, storage, queries

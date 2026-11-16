@@ -9,7 +9,7 @@ import pytest
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
 
-from backend import database  # noqa: E402
+from backend import dataBase as database  # noqa: E402
 
 
 @pytest.fixture

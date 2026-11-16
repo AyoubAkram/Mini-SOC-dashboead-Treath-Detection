@@ -34,7 +34,7 @@ from ingestion import (
     top_source_ips, count_unique_source_ips, verify_batch,
     get_alert_events, count_alert_events, alert_severity_counts, set_alert_status,
 )
-from database import is_connected
+from dataBase import is_connected
 from models import LogSource
 from utils import is_private_ip, utcnow
 
