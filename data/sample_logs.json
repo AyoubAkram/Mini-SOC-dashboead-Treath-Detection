@@ -1,0 +1,2114 @@
+[
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785479.800373,\"uid\":\"C70bd6b2e528913\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":34152,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.374227,\"orig_bytes\":185,\"resp_bytes\":98,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785539.845116,\"uid\":\"Ccff4dcbddc3114\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":47489,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.12807,\"orig_bytes\":189,\"resp_bytes\":128,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785599.743199,\"uid\":\"C2c5bb8e5196115\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":51923,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.359652,\"orig_bytes\":211,\"resp_bytes\":128,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785660.585841,\"uid\":\"Cbc17114a6df116\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":39002,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.150866,\"orig_bytes\":218,\"resp_bytes\":122,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785719.372417,\"uid\":\"Cdc62af2c91d617\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":36069,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.118424,\"orig_bytes\":188,\"resp_bytes\":121,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785731.363375,\"uid\":\"C77767c4e42482\",\"id.orig_h\":\"10.0.3.127\",\"id.orig_p\":49521,\"id.resp_h\":\"119.219.67.4\",\"id.resp_p\":22,\"proto\":\"tcp\",\"duration\":27.649216,\"orig_bytes\":2330,\"resp_bytes\":182073,\"conn_state\":\"SF\",\"service\":\"http\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785779.421225,\"uid\":\"Cd00a22a5efaa18\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":51902,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.136901,\"orig_bytes\":215,\"resp_bytes\":97,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785813.533706,\"uid\":\"Cadbab600860c4\",\"id.orig_h\":\"10.0.1.21\",\"id.orig_p\":33438,\"id.resp_h\":\"213.219.137.56\",\"id.resp_p\":80,\"proto\":\"tcp\",\"duration\":26.049453,\"orig_bytes\":1744,\"resp_bytes\":127335,\"conn_state\":\"SF\",\"service\":\"http\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785840.861643,\"uid\":\"C7d2cfc31908b19\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":33526,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.278314,\"orig_bytes\":186,\"resp_bytes\":108,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785901.522421,\"uid\":\"C8b7e4281427520\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":43059,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.241241,\"orig_bytes\":201,\"resp_bytes\":110,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794785959.74854,\"uid\":\"C650818ad80a221\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":49097,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.21858,\"orig_bytes\":194,\"resp_bytes\":111,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786019.408157,\"uid\":\"C76be94ef1a2622\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":39188,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.351616,\"orig_bytes\":189,\"resp_bytes\":110,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786051.085272,\"uid\":\"C7d9f206009c337\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42454,\"id.resp_h\":\"198.51.100.17\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":129.563825,\"orig_bytes\":528998497,\"resp_bytes\":3814,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786078.427362,\"uid\":\"C74871e607c3923\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":55169,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.31746,\"orig_bytes\":188,\"resp_bytes\":107,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786095.154913,\"uid\":\"C916bc051ac7c5\",\"id.orig_h\":\"10.0.1.100\",\"id.orig_p\":56720,\"id.resp_h\":\"44.150.175.123\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":18.642493,\"orig_bytes\":2497,\"resp_bytes\":146199,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786104.695763,\"uid\":\"Cf551219763c53\",\"id.orig_h\":\"10.0.1.90\",\"id.orig_p\":52367,\"id.resp_h\":\"220.221.215.138\",\"id.resp_p\":22,\"proto\":\"tcp\",\"duration\":16.396818,\"orig_bytes\":4074,\"resp_bytes\":154623,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786125.440384,\"uid\":\"Cb408bb04a51f38\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":59092,\"id.resp_h\":\"198.51.100.17\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":183.051381,\"orig_bytes\":641993353,\"resp_bytes\":2428,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786140.388805,\"uid\":\"Cd07a3964352324\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":57322,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.311874,\"orig_bytes\":204,\"resp_bytes\":106,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786149.136524,\"uid\":\"C2b461fb9ec2c39\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":57751,\"id.resp_h\":\"198.51.100.17\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":84.684362,\"orig_bytes\":507963131,\"resp_bytes\":7281,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786202.376078,\"uid\":\"C2b81cfd2c08e25\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":51529,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.21867,\"orig_bytes\":189,\"resp_bytes\":123,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786232.654593,\"uid\":\"C090c5dfe537340\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":52249,\"id.resp_h\":\"198.51.100.17\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":202.031521,\"orig_bytes\":589988807,\"resp_bytes\":6537,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786260.4755,\"uid\":\"C870803cc22ae26\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":56712,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.297752,\"orig_bytes\":219,\"resp_bytes\":101,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786322.048168,\"uid\":\"C279ea19f78d827\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":33653,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.381192,\"orig_bytes\":199,\"resp_bytes\":99,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786383.036436,\"uid\":\"Cf1e23942af9428\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":48073,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.140811,\"orig_bytes\":190,\"resp_bytes\":123,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786443.805342,\"uid\":\"C5d64b3000a1f29\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":34215,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.107574,\"orig_bytes\":218,\"resp_bytes\":130,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786503.333756,\"uid\":\"C855afc59981330\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":52034,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.363108,\"orig_bytes\":187,\"resp_bytes\":124,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786564.016264,\"uid\":\"C1ed750145f2e31\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":47925,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.234919,\"orig_bytes\":199,\"resp_bytes\":97,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786569.388237,\"uid\":\"C13deda8255b69\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":36212,\"id.resp_h\":\"10.0.1.5\",\"id.resp_p\":22,\"proto\":\"tcp\",\"duration\":44.083667,\"orig_bytes\":500,\"resp_bytes\":2000,\"conn_state\":\"SF\",\"service\":\"ssh\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786578.972673,\"uid\":\"C2f8e0148d34510\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":33699,\"id.resp_h\":\"10.0.1.6\",\"id.resp_p\":22,\"proto\":\"tcp\",\"duration\":9.599237,\"orig_bytes\":500,\"resp_bytes\":2000,\"conn_state\":\"SF\",\"service\":\"ssh\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786587.652585,\"uid\":\"C4e2fd980f95d11\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":32951,\"id.resp_h\":\"10.0.1.7\",\"id.resp_p\":22,\"proto\":\"tcp\",\"duration\":7.141304,\"orig_bytes\":500,\"resp_bytes\":2000,\"conn_state\":\"SF\",\"service\":\"ssh\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786602.100614,\"uid\":\"C63da2aaa548412\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":39218,\"id.resp_h\":\"10.0.1.8\",\"id.resp_p\":22,\"proto\":\"tcp\",\"duration\":5.38336,\"orig_bytes\":500,\"resp_bytes\":2000,\"conn_state\":\"SF\",\"service\":\"ssh\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786608.26514,\"uid\":\"Ce4cf7c1f91838\",\"id.orig_h\":\"10.0.3.217\",\"id.orig_p\":32942,\"id.resp_h\":\"178.11.151.138\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":4.790912,\"orig_bytes\":3563,\"resp_bytes\":40812,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786625.656359,\"uid\":\"Cbfec3b24879732\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":53254,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.116366,\"orig_bytes\":186,\"resp_bytes\":104,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786684.229183,\"uid\":\"Ce3815d4e450233\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":57163,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.359801,\"orig_bytes\":204,\"resp_bytes\":127,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786743.977524,\"uid\":\"Cd304f0e6458234\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":59116,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.383726,\"orig_bytes\":210,\"resp_bytes\":123,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786747.233959,\"uid\":\"Cdc7e5fc816f46\",\"id.orig_h\":\"10.0.1.246\",\"id.orig_p\":49193,\"id.resp_h\":\"121.130.27.165\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":12.812413,\"orig_bytes\":1178,\"resp_bytes\":180452,\"conn_state\":\"SF\",\"service\":\"http\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786802.538379,\"uid\":\"C1873222f577235\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":55322,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.240333,\"orig_bytes\":182,\"resp_bytes\":122,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786856.478595,\"uid\":\"Cef46b79ecb4e7\",\"id.orig_h\":\"10.0.1.148\",\"id.orig_p\":50506,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"robinson.org\",\"qtype_name\":\"A\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786863.960094,\"uid\":\"C30bd18041c8836\",\"id.orig_h\":\"10.0.2.77\",\"id.orig_p\":50089,\"id.resp_h\":\"203.0.113.210\",\"id.resp_p\":443,\"proto\":\"tcp\",\"duration\":0.220843,\"orig_bytes\":186,\"resp_bytes\":101,\"conn_state\":\"SF\",\"service\":\"ssl\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786987.674311,\"uid\":\"C1dcfde0279e11\",\"id.orig_h\":\"10.0.2.103\",\"id.orig_p\":46708,\"id.resp_h\":\"37.189.18.32\",\"id.resp_p\":80,\"proto\":\"tcp\",\"duration\":26.734513,\"orig_bytes\":4742,\"resp_bytes\":131167,\"conn_state\":\"SF\",\"service\":\"http\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786995.632362,\"uid\":\"C0bcc6549e20841\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42241,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"5360ee252525b182adcf49d238b13cbe223c8a67ec7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786996.097362,\"uid\":\"C2aac9a02bca142\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":45504,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"5e46b42274ea2cde4b764fb196050957906b38ed.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786996.475362,\"uid\":\"Ccda6ebb6a57e43\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46672,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"70c944d4de7063d26fe76961b8780f36c0ae65bf910c8c60282dd01.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786997.066362,\"uid\":\"Cab87f658b39344\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":36930,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"294272bbc441776c4236779115fdc47cf62528903226669f2d33c29b750.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786997.492362,\"uid\":\"Cf590b5475cb645\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":60021,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"59045f7877642d06b5f149c6d9fd85c0748141033c50c0b37b15ab91f11.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786997.764362,\"uid\":\"C5d895e8a2e3646\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":49870,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f41157b3a21a59bd9dfd88db493143a36975f65f274b09f8b.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786998.299362,\"uid\":\"Ce984facaf01147\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":60042,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"ebcc24f6fc630515c094669aaa37f14b7773e8aa10bd48de3f4.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786998.617362,\"uid\":\"Cd847e9720b5248\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":56569,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a63f39d546c8be5717f46422fe2d82fd025acc7178749fc198e57605f48.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786999.172362,\"uid\":\"Cfcc3b264b70949\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42797,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"608751e448178e64d211220c708778f54711f6e29bf37fd4cf45153a767c.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794786999.519362,\"uid\":\"Cc850c80e2e8950\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":43459,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"4721f42fc8e73b4dc4d9622fe314351ce38abfc4c4.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787000.101362,\"uid\":\"Ccdf49cfba2aa51\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33859,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"62a12b2cba6e1acb2e9f85e9071f58c59651d80fa746df722d883e265.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787000.466362,\"uid\":\"C25371d31549a52\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":43961,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"83840fd9cb19275d4dc44a1f9ecd9392ef10bb1383a72e85865cfc8cd7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787000.688362,\"uid\":\"C098379c4ab8053\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":52521,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"ccbc7b7b7000627244243ac414b764a2f15e6a77cacf08e1eb8933290f.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787000.836362,\"uid\":\"C3069d3fff0fc54\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33219,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f77fe06676ee9f369c1bbb3426f9f62a37471f7a334a3f6.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787001.428362,\"uid\":\"C71582f8652ff55\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":52328,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"41e18d37204ae4131a77b4bafa13c5cefa5aba57c260f2a26.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787001.764362,\"uid\":\"Cdda6e38c781f56\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":41027,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"6a667f97368c9af0d3bc9fd4624b907f8ab8786f5503c7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787002.016362,\"uid\":\"C21a5d7e5d67f57\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50688,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f5167f86319078efdb70f99b96f262917a7eb4b9.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787002.454362,\"uid\":\"Ccac75fec2ecf58\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":41540,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"ce452f50435e9603317c689c6e1b62e4135277300d9dfbe54880180f29b0.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787003.029362,\"uid\":\"Ca6d3aa558f5959\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50868,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"d723c2d87ac04d3e1184cd36d0122ab6620559c322f0ac1671f6b41.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787003.180362,\"uid\":\"Cdcd4e9d3087a60\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":45795,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"4f6ec02ecfc321fb3d25009b2421413fb20cf3b5b99.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787003.342362,\"uid\":\"Cd9314ae49e9361\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33775,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"d50d5fe1118b850be716f121c1e6458fea9783d93edf3f49de97148992f.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787003.834362,\"uid\":\"Ce5f72206b3b662\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":48468,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b9f0a3e09dc503482e4c6129d0366fc01187f0fccba539f11.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787003.997362,\"uid\":\"C99560bc777dd63\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":34680,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"245999c42bac190bb6b0889a6edc124bcaedab9519632b77fb57cf.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787004.113362,\"uid\":\"C686c250396e664\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":43581,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"3e4432e7577f4c543194b134b712ea85da90dd45626f5fb2356ec6655.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787004.684362,\"uid\":\"C8bfd1e4284b465\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":49594,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b03a9963683f8db3dd5d6c3d9dbe272f9d118a1044.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787004.921362,\"uid\":\"C6ae680900b9466\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":41514,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"852cca28e9989e2e9305a7f0275d1624463d3cdd99a9b6fc6e0549d.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787005.347362,\"uid\":\"Cc6b0164585f167\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":36195,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2a81a286649507f15b4c683b7ed047a5682d8a810649.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787005.460362,\"uid\":\"C15be2fd2430268\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":58812,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"52d9051b23a24000744a80f1947cc1e5bb15e241.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787005.609362,\"uid\":\"Cac65eccd4f1a69\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":55532,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a454820206790b21d7d9ada8c0c78b68faef56b0078999105698658.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787005.909362,\"uid\":\"C09279de775ca70\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40492,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"97c837f312637a800addcee61a4d1c738fa02e093c.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787006.387362,\"uid\":\"Cdca17c2c3d9a71\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":36169,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"7122dcd2f989da873c4b07548f9fe792d291e70e0b7fd.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787006.781362,\"uid\":\"C6dc5b6ee0ecc72\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33613,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a819b59d4234e48a398b6112a722017af465222b987d28defec58.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787007.256362,\"uid\":\"C292a52ca448b73\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40208,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0fdebcba3e4e504b451f0fba193bc4c5d3be3b2fe74f5d282d487a0ec.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787007.653362,\"uid\":\"C23b247132d2274\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46430,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"c508549c443a9c84f4ce13275340896c780fe9406.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787008.009362,\"uid\":\"C61f4dedfe56975\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":37799,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b33ccce91c5a62e31f5945997867308942b445f750.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787008.543362,\"uid\":\"C59bb6075710376\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":43270,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f3b11d250be78ae6bfffb87abdcd76e1e277ac91.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787008.897362,\"uid\":\"Cf88ca6ce347377\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":39866,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"8f7e6763f480b93cbaa6ce44d3f9bb34e41c3deda070.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787009.195362,\"uid\":\"Cefdbf812a48278\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":58770,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"7dcb4ccbc8645cccbccd34248e21ec771caa4f2f0eccd.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787009.570362,\"uid\":\"Ca4f75ed0ede579\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46391,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"8d1823ecfda9adc4165582cd38cc76a82958ebb190b37a179a45de354.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787009.764362,\"uid\":\"C2a06dbb9aee080\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":37444,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"cfedf759e093253d1d3ea846c2b949eea7d862ad.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787010.177362,\"uid\":\"Cb8213ca9d06b81\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33047,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f0a97e575b2dd375d3bb7fcf017ce4dd835e006f75468.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787010.395362,\"uid\":\"C5e3e2dcc166d82\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":44515,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"485809c310d3d29f29c38bd7dc3e557d725a412e8dd407e4c454828.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787010.642362,\"uid\":\"C1e514247762883\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46418,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"577fc004dec440f7137450ae1a4b6fac014452ec9.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787011.019362,\"uid\":\"C78a3453c522084\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":38566,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b0b3cf4abee8eecfa9e4e702c532515f0e94ecefdb11a7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787011.360362,\"uid\":\"Cf1c90f2647d885\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":37836,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"8ade32b95a8304c237addd5332c5de2297a775d5572a5b288dd125.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787011.893362,\"uid\":\"C71d3041cdea986\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50860,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"9cbf57675d5a01596b8b11fb7915110d185b60f6e3d512723e3578f747.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787012.357362,\"uid\":\"C7b446de5618f87\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":38462,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2285737329e144f758e47a7856c1004d76ab691575bf71ce36b757a.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787012.740362,\"uid\":\"C24bfa91a32d888\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":44875,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0787609ca74f3df3b8c50f729f2cb10a1a4563c281db.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787013.328362,\"uid\":\"C6050d4f8340889\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40273,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"d65af20841f263bfdb3c098f772676a2c501a41c7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787013.781362,\"uid\":\"C0baf877ffe2390\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":55878,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"fc51d6e96c3affe290f7be840254d7a1157d0bd5422.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787014.315362,\"uid\":\"C35f25529edf391\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":53977,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"3cf396774dcf8857ed9c0a4d9b38f9bf6646f14eab8705255059d4bbb.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787014.647362,\"uid\":\"Cccb13678c9b392\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":58739,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"18a31f0392e11f6a7603400e4ae935c2ec1c7d3ed4cd6d65.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787015.091362,\"uid\":\"C6fbf2d27b3b293\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":56402,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0a516ff10fdf9a7c18b0222a4c06bad495d1b5f49330c3dfef.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787015.536362,\"uid\":\"C4e39b30298d694\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42719,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b759a7b13510ed564a4158d958c7572cdb478e10c314a4c3b6ae.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787016.041362,\"uid\":\"Cd04b82633a6195\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":43880,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a13329747eba4e2b28a3a865c671a6b4c7b2cadb9ac9fb128f481a.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787016.572362,\"uid\":\"C5d311f189bc696\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":51274,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"29acbbdbe219ab96e3d568c402d5c89b2531deb510ec9811ea1e.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787016.887362,\"uid\":\"C2e14d6d9014797\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":48840,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"98ccc189fc34c6f00e1a9850952926ce4054bcc358cb51c5572bb2610a10.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787017.044362,\"uid\":\"Cbf36fdaf436698\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":47559,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a4347ba576e93b02a6280202a7fd4a450b4cd3499c78fd1b214daf.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787017.500362,\"uid\":\"C5aa166f970ba99\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42770,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"9853e500cbbe1a750ea1106172394fa75f6116dcb0b4ad45d56188d1a22.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787017.700362,\"uid\":\"C2d5856a0f6b7100\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":36907,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a13eae56ce689136130f632b709791f87eb5bf0748c4a808.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787018.273362,\"uid\":\"Ce7006db5f093101\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":55151,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2afd39b0d70ab991d4251afd5780eb397b28c37220327aac738.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787018.743362,\"uid\":\"C6a7ff5e8e1fb102\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":51380,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"edb208e710c6cbb285c216b618f0c8d408f014aa8c0082c2f424.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787019.276362,\"uid\":\"Caa323e95dccc103\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50960,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0b0e79aac5d87f1fed1f399cd1a3e4736ded3925cbf5fc7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787019.573362,\"uid\":\"C5568d3ac221f104\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":51864,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"18775d0851d5eb6fb5f7cfd9ec229986c31962b9e32d0d78e36f.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787020.055362,\"uid\":\"Cc7802b4d0299105\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33353,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b8913f22eabd71d0310345565d747040073671bc484fb.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787020.422362,\"uid\":\"C1c5ecce94df4106\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":48678,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"e82dfd9eb2d0412e704b29d38ed43adb3eca0163dc9554fec.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787020.826362,\"uid\":\"C0e662e8324b9107\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":47354,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"52531147509512f2f3dcf46380bac9251f2d56fd969350d6fe.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787021.147362,\"uid\":\"Cc6a1904b8288108\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":54485,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"1ea3e5cfb7e7f5a4a33ba58ffccfc66cddcc9fcb747ecd301.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787021.745362,\"uid\":\"Cd9074b416f97109\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":36435,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"aad6a7b2edbd04fda5d0ff590cf254942152ffad5175bfd04b3e280.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787021.919362,\"uid\":\"Cf38d5bbede2e110\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46579,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"707c7dec6c2aeddcaf2074709ec91967475256eb5ad3cc861c80637.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787022.514362,\"uid\":\"C81693b954ed8111\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50529,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2c5db20e652ad17521ee595793bf1dad445f85ad94c7800253c58bca6e34.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787023.016362,\"uid\":\"Ccac525b76f58112\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":49411,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"25a5bcabba56de36d0e0efe1c5e0c479e9e5f5eb866b3f17418112.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787023.602362,\"uid\":\"C2fee84ce251c113\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40338,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"4981d1181ac876e81d5e36e472e2bb3f3db22920673a9c2377251ce2df.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787023.758362,\"uid\":\"C668f0e38355c114\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":60913,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"9724b9e3fd0e6e459743dc06c1cd1d7915096f84d84ea729e5a.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787023.920362,\"uid\":\"C4188f31b1456115\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46375,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"e8ccea36595b8e4c5adbdcfbc79324a95ae8964c.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787024.088362,\"uid\":\"C9d7ec9e1a4b7116\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":38429,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"1ebe4ec5decb7536c5ee06a950c676cc3f9f581a354fb76aada211.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787024.491362,\"uid\":\"C359f57527bac117\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":45825,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"6d71956e833f37affcffcd2c197f172313a42552.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787025.009362,\"uid\":\"C4a63d3c74f45118\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":55516,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"1736d3461d4fbcb11febb1cd2871a51a925b9c0b12192c31761019.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787025.365362,\"uid\":\"C62d581203047119\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46624,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"dfc4a3ea46aa63def14f610e5ee257d9e6ee1ca60a06a3e8de.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787025.468362,\"uid\":\"C36e15a8dd33d120\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":51698,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"051ac490ac5f1aa589f731ea4225cacb3f54da61326d39deda30.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787025.732362,\"uid\":\"C50af0dc82de8121\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":54349,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a86232abfe6850025574df7365d4bf7e8425bf4400dfb6214ada71.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787025.960362,\"uid\":\"C8056da258b4c122\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":54490,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"5069da8545b593647a2064b83f1cbc071216bfb451c6fdbbf455.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787026.253362,\"uid\":\"C28b6db5df7c1123\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":35825,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f5520de1f361b6b2f5c2d7c9a73c134434e58b66a0318.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787026.706362,\"uid\":\"C0fbda6788be9124\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46719,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"be849dc2a3da01286fba79d8bb6613f7dba1f07f2801cd0e0bbc.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787027.278362,\"uid\":\"Cbfa5fcc1676e125\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40447,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"26fec9beb1688aa3c12cf2b96575ec25817045f5.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787027.453362,\"uid\":\"Cfffc23416fcb126\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":54244,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"64840549193f572e419f496643b9a627b305d784c892d7bee227da4f47f7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787027.936362,\"uid\":\"Cb23ae8559900127\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":45566,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"46fc6f44b328c9e55b7b209b7d751434e293a99f.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787028.186362,\"uid\":\"C56c028f21c9d128\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":45246,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"ec0312666be3797e6c87ca43279bb40f247cbc14a0f5024d7ecba6.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787028.588362,\"uid\":\"C1074c594530d129\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42616,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"d5ea78d09045a4a91f93909865036a11947cb3058123c1b3a4bb5297f67a.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787028.729362,\"uid\":\"Cd5cfd253ba1f130\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":52308,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"333dd2f47aed1fa263626430f678312b06c86fd6b.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787028.985362,\"uid\":\"C61981b6db0e3131\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":34858,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"7a0e368ad35714aaaa6c5fa444995d7b8e384cc2ce047d3f1.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787029.407362,\"uid\":\"Cb1b811307453132\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50425,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a34b1822ab218450d69d25b63d6c80ed36a74ed9a37af3a723092fec8fd8.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787029.756362,\"uid\":\"C514b1e82d5cf133\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":48368,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0d8e882ef90dbf04ae6bbcb654bba8009125f78a20ecedc2f76a7f946a73.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787030.265362,\"uid\":\"C193d1f1ff9cf134\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":58748,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a3ed2da7d8108980a38204decd365c3de859c586.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787030.632362,\"uid\":\"Ce585fc70b9af135\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46833,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"5cf69f9a70c059635bc5269d6f47437d0051f77277.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787031.052362,\"uid\":\"Cd0b440c8d9fd136\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":35709,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"1acfa81df7099fd5a987c551d946420cd8373c3fb8b4f4.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787031.322362,\"uid\":\"C182a1a66e43b137\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":35572,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"88f66013dac58658db1c27cdce3b19fad5af7aaa4efa27f57bebef1736e.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787031.858362,\"uid\":\"C24f334bc779b138\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33050,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"293998a0099a77b9467db3b9271f6fa7f56c1e099bd3cb2cb3.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787032.201362,\"uid\":\"C23a9b6b75843139\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":39648,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"3ecdefb01809bfd5c00543c3268db6925994406dc83c989ff760f6b.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787032.588362,\"uid\":\"C6cc970c55c0b140\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":51148,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b52b3ba46477372f60dc61fc39f9e73af96f5a820bc27dfcd9f61c.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787032.895362,\"uid\":\"Cd8399a86d508141\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":47734,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"46917c188b704c951b6e17e13fed6882e070977777570eb7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787033.147362,\"uid\":\"C17d79ca73f35142\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":53893,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"f27b229d9aac929d769e383f345820fcfbddf113d.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787033.284362,\"uid\":\"Cc3d7fad58a5f143\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":39563,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"86b7dc362ad2d00fe33895e6b5167be02d3ad31b17cae.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787033.705362,\"uid\":\"C5e0041f98018144\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":33504,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"61358bc8df3bae491724a283637a6a516382668634a3e4d91aad6b80c94.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787034.105362,\"uid\":\"Cdd95b0fd3866145\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":47402,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"9d4d55ce0e37fd6053c8cc3c7af8aadfcf3645947f.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787034.331362,\"uid\":\"C4441466a8d22146\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":37105,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"712e8e83158381745fb5fd1512da2159965cd29f0be.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787034.553362,\"uid\":\"C90c31d5b997c147\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40242,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b3acb3688665e4945783160ce6c6967f899e3d4a0a629a11d94.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787034.678362,\"uid\":\"C75ae5bfb980e148\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":40667,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"270a5df9e4f7bc1b23036f1c5a863c1d5f72bcd6c5bfa3e8d.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787034.992362,\"uid\":\"C600db80bbd19149\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":38014,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"971b0921ff9341b8ca78bafc57c472347ecba4a49ca30defa4d0ecd7947.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787035.172362,\"uid\":\"Ce0f22acda483150\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50365,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"6a278c5cbddfa1b9ff83204a9f9ee66904de9a9dabab933526d04.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787035.662362,\"uid\":\"C8320388d01dd151\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":47415,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"684b8518d0f925fad8213f529a5143a72d9650a38528acec15aa.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787036.235362,\"uid\":\"C36e27ea5e661152\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":39158,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0719464c6fe04cc2e30ec175f3403e730248a50b7b201.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787036.584362,\"uid\":\"C5629002ae291153\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":44693,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"e2ae407219ba9e533deebebb9bc835f4d577b79f0aa9f18c733e9.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787037.096362,\"uid\":\"Cc763c9789540154\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":44361,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"ce2248c94b579578be4b65ad2876c608f60f83ff1d4.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787037.535362,\"uid\":\"C88305a1dd079155\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":37964,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"c5afcb88be06b238ae91f41c9874a39037961e53b042d06d7.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787038.106362,\"uid\":\"C2fc94709a811156\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":51575,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"91e4c687037f11a0ca335f3ff01d8f134c43ab8d41.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787038.512362,\"uid\":\"C1f58e901e4e9157\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":36357,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"b86d177e761e79ba829c71e0efb80d0431c0542db8c6c4.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787038.787362,\"uid\":\"C49a8a2519f01158\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":42287,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"d8f9b7a66bfaa17699ae0c9cd95eb96d3d2b39f21723ef06dda90a.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787039.168362,\"uid\":\"C20a93579f912159\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":46502,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"ae83b7a475227a42d2c928a2986e941958dbe7168232a9511f833a6d.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787039.716362,\"uid\":\"C01dcf8cd69a4160\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":38456,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0b73d5e4d68b63771f242e77c3833705d34a350af5fbcb725d7358bb549.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787039.828362,\"uid\":\"Cce210e30d116161\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":57286,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2c183dac85b2950b02f135b217053f23c722d8093f.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787040.166362,\"uid\":\"Cd98a443f8408162\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":59873,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"0a9a0fd060915b6ccf8ffd30ba7ca59c426f7fcb89febdc83.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787040.377362,\"uid\":\"C8504cde57afc163\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":48850,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2c376f242c40bdfeebd2f0cf1068366abb050b03f5b4d1967473c9c64.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787040.785362,\"uid\":\"C13dd406364da164\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":41605,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"655e101e42c14cf54bfe9c57731d702ceaa29610900a01d98bf33b699.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787041.184362,\"uid\":\"C79689e801035165\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":45033,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"1ce0e8ff2d1d43e0c2fef5cbd39a2f4ede8ef977690d706481fa.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787041.690362,\"uid\":\"C5d94761daaa1166\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":59513,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"cd76237fd640e1c52e36eacf5811ae8a2b4aadf54d6d8791a8260.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787042.251362,\"uid\":\"C4f89fffa753c167\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":57317,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"a252810faf2a980bcc1a962152ed0e486fc7e0c864007c1.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787042.666362,\"uid\":\"Cdfb184416e5b168\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":50433,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"33db78c7a8a9bed151398f38d52bd2fae312c2c2.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787043.083362,\"uid\":\"C5595b8aefd12169\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":58907,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"d9b5da715f569b8bf2de22459489f0df8251256e8.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787043.668362,\"uid\":\"C54f99d6cf295170\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":48445,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"455bcd583acbde5be507f71a00115b9013fdac2669.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787044.204362,\"uid\":\"Ce99a01ea0cd5171\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":38485,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"086b98ddf7df3c84ceafe89384f24685de2deb803b4a548c3fd164d050c.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "zeek",
+    "raw": "{\"ts\":1794787044.761362,\"uid\":\"Ce3b44727bff4172\",\"id.orig_h\":\"10.0.3.40\",\"id.orig_p\":53099,\"id.resp_h\":\"10.0.0.2\",\"id.resp_p\":53,\"proto\":\"udp\",\"query\":\"2568f369b1d8c4d449c7e4d8b01878141e8f861e429d30ff198b034b074.cdn-update.example.net\",\"qtype_name\":\"TXT\",\"rcode_name\":\"NOERROR\"}"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:31:47 fw-01 kernel: [ 1046.048118] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.15.83.23 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=59898 DF PROTO=TCP SPT=36745 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:39:45 fw-01 kernel: [ 1523.865072] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=134.202.230.3 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=910 DF PROTO=TCP SPT=46256 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:40:51 fw-01 kernel: [ 1589.440647] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=10.0.3.40 DST=198.51.100.17 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=25730 DF PROTO=TCP SPT=52475 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:41:14 fw-01 kernel: [ 1613.283425] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=217.110.46.242 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=41148 DF PROTO=TCP SPT=40724 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:42:05 fw-01 kernel: [ 1663.795759] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=10.0.3.40 DST=198.51.100.17 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=4308 DF PROTO=TCP SPT=39366 DPT=443 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:42:07 fw-01 kernel: [ 1666.231793] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=168.132.108.233 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=60063 DF PROTO=TCP SPT=33227 DPT=443 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:42:29 fw-01 kernel: [ 1687.491899] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=10.0.3.40 DST=198.51.100.17 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=47489 DF PROTO=TCP SPT=56283 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:43:52 fw-01 kernel: [ 1771.009968] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=10.0.3.40 DST=198.51.100.17 LEN=44 TOS=0x00 PREC=0x00 TTL=52 ID=41281 DF PROTO=TCP SPT=44758 DPT=443 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:43:54 fw-01 kernel: [ 1772.937154] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=206.77.2.62 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=44192 DF PROTO=TCP SPT=48149 DPT=80 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:47:17 fw-01 kernel: [ 1975.882308] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=176.167.176.89 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=52 ID=40565 DF PROTO=TCP SPT=36788 DPT=80 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:20 fw-01 kernel: [ 2159.327691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=49242 DF PROTO=TCP SPT=38850 DPT=173 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2159.386691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=32096 DF PROTO=TCP SPT=50661 DPT=4376 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2159.482691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=23866 DF PROTO=TCP SPT=50552 DPT=9158 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2159.621691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=58992 DF PROTO=TCP SPT=43401 DPT=4132 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2159.771691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=496 DF PROTO=TCP SPT=34674 DPT=2140 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2159.881691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=57 ID=49595 DF PROTO=TCP SPT=33688 DPT=5473 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2160.029691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=27712 DF PROTO=TCP SPT=54506 DPT=9486 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2160.100691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=52 ID=14723 DF PROTO=TCP SPT=54448 DPT=6794 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2160.174691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=35119 DF PROTO=TCP SPT=46595 DPT=7798 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:21 fw-01 kernel: [ 2160.302691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=46206 DF PROTO=TCP SPT=39622 DPT=7913 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2160.483691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=39755 DF PROTO=TCP SPT=48555 DPT=5551 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2160.557691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=49549 DF PROTO=TCP SPT=35350 DPT=193 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2160.750691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=11281 DF PROTO=TCP SPT=39438 DPT=615 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2160.880691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=1999 DF PROTO=TCP SPT=50688 DPT=3603 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2161.065691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=57 ID=48440 DF PROTO=TCP SPT=44735 DPT=1980 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2161.087691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=30160 DF PROTO=TCP SPT=41716 DPT=4402 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2161.231691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=51992 DF PROTO=TCP SPT=37486 DPT=5352 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:22 fw-01 kernel: [ 2161.307691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=24734 DF PROTO=TCP SPT=52708 DPT=292 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2161.478691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=21382 DF PROTO=TCP SPT=57504 DPT=3428 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2161.672691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=30708 DF PROTO=TCP SPT=44103 DPT=7490 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2161.826691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=19449 DF PROTO=TCP SPT=33987 DPT=8437 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2161.997691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=34580 DF PROTO=TCP SPT=47593 DPT=4537 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2162.044691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=62878 DF PROTO=TCP SPT=47741 DPT=6053 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2162.186691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=52 ID=58863 DF PROTO=TCP SPT=43201 DPT=1295 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2162.212691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=6021 DF PROTO=TCP SPT=38278 DPT=9106 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:23 fw-01 kernel: [ 2162.297691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=49082 DF PROTO=TCP SPT=35098 DPT=3075 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2162.450691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=47005 DF PROTO=TCP SPT=37789 DPT=8831 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2162.590691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=46987 DF PROTO=TCP SPT=48125 DPT=187 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2162.672691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=33692 DF PROTO=TCP SPT=60987 DPT=1567 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2162.799691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=16333 DF PROTO=TCP SPT=52287 DPT=2554 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2162.931691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=38560 DF PROTO=TCP SPT=48375 DPT=5407 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2163.048691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=1072 DF PROTO=TCP SPT=49117 DPT=3595 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2163.166691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=30502 DF PROTO=TCP SPT=58477 DPT=7594 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:24 fw-01 kernel: [ 2163.261691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=20571 DF PROTO=TCP SPT=41527 DPT=3382 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2163.429691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=39467 DF PROTO=TCP SPT=49807 DPT=9931 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2163.584691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=24150 DF PROTO=TCP SPT=59173 DPT=2799 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2163.754691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=11146 DF PROTO=TCP SPT=47752 DPT=5070 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2163.802691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=26275 DF PROTO=TCP SPT=32957 DPT=1381 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2163.872691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=49268 DF PROTO=TCP SPT=58995 DPT=9300 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2164.026691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=57 ID=5542 DF PROTO=TCP SPT=41135 DPT=6833 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2164.055691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=7582 DF PROTO=TCP SPT=47428 DPT=8550 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:25 fw-01 kernel: [ 2164.245691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=62910 DF PROTO=TCP SPT=55504 DPT=9652 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.396691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=52 ID=42627 DF PROTO=TCP SPT=54106 DPT=9162 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.428691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=11033 DF PROTO=TCP SPT=54128 DPT=2184 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.519691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=18803 DF PROTO=TCP SPT=53010 DPT=1771 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.550691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=4674 DF PROTO=TCP SPT=55728 DPT=464 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.709691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=41661 DF PROTO=TCP SPT=49699 DPT=4439 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.867691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=53754 DF PROTO=TCP SPT=34512 DPT=6874 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2164.977691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=25755 DF PROTO=TCP SPT=47973 DPT=729 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2165.059691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=27100 DF PROTO=TCP SPT=45411 DPT=3036 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2165.101691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=11697 DF PROTO=TCP SPT=38390 DPT=9016 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2165.163691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=49567 DF PROTO=TCP SPT=43813 DPT=8412 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2165.254691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=6057 DF PROTO=TCP SPT=33388 DPT=3791 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:26 fw-01 kernel: [ 2165.293691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=56537 DF PROTO=TCP SPT=49703 DPT=7714 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.434691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=11516 DF PROTO=TCP SPT=48987 DPT=5592 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.483691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=53373 DF PROTO=TCP SPT=45204 DPT=5629 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.681691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=43964 DF PROTO=TCP SPT=51339 DPT=5693 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.832691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=48666 DF PROTO=TCP SPT=55104 DPT=5208 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.857691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=7575 DF PROTO=TCP SPT=45129 DPT=9939 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.954691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=48925 DF PROTO=TCP SPT=50176 DPT=7860 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2165.981691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=46822 DF PROTO=TCP SPT=47781 DPT=4184 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2166.025691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=49185 DF PROTO=TCP SPT=37982 DPT=8001 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2166.173691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=4425 DF PROTO=TCP SPT=36935 DPT=5359 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:27 fw-01 kernel: [ 2166.349691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=26720 DF PROTO=TCP SPT=41027 DPT=4098 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2166.482691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=24979 DF PROTO=TCP SPT=53527 DPT=602 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2166.503691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=7962 DF PROTO=TCP SPT=35921 DPT=8029 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2166.606691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=55429 DF PROTO=TCP SPT=45390 DPT=2183 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2166.738691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=16444 DF PROTO=TCP SPT=47380 DPT=357 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2166.917691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=19428 DF PROTO=TCP SPT=60948 DPT=7876 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2166.980691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=35909 DF PROTO=TCP SPT=33771 DPT=6000 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2167.054691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=14736 DF PROTO=TCP SPT=55454 DPT=4160 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2167.157691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=15064 DF PROTO=TCP SPT=45388 DPT=7637 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:28 fw-01 kernel: [ 2167.330691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=25861 DF PROTO=TCP SPT=39572 DPT=3257 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2167.490691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=35274 DF PROTO=TCP SPT=45155 DPT=6022 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2167.577691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=15897 DF PROTO=TCP SPT=38522 DPT=4484 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2167.674691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=54053 DF PROTO=TCP SPT=39170 DPT=8394 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2167.737691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=8195 DF PROTO=TCP SPT=47344 DPT=6553 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2167.919691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=40098 DF PROTO=TCP SPT=42831 DPT=4982 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2167.948691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=19527 DF PROTO=TCP SPT=60175 DPT=3577 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2168.025691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=33163 DF PROTO=TCP SPT=44242 DPT=9532 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2168.144691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=48 ID=27609 DF PROTO=TCP SPT=49993 DPT=888 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:29 fw-01 kernel: [ 2168.263691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=36649 DF PROTO=TCP SPT=51924 DPT=6732 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2168.374691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=15475 DF PROTO=TCP SPT=39823 DPT=1058 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2168.519691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=65373 DF PROTO=TCP SPT=59442 DPT=8339 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2168.650691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=2037 DF PROTO=TCP SPT=50637 DPT=8721 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2168.695691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=52 ID=26054 DF PROTO=TCP SPT=36802 DPT=4893 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2168.868691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=65114 DF PROTO=TCP SPT=53289 DPT=7907 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2168.994691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=20356 DF PROTO=TCP SPT=32880 DPT=1487 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2169.030691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=30208 DF PROTO=TCP SPT=53324 DPT=8350 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2169.075691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=52 ID=57291 DF PROTO=TCP SPT=58909 DPT=8560 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2169.219691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=11870 DF PROTO=TCP SPT=36851 DPT=9763 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:30 fw-01 kernel: [ 2169.327691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=52 ID=29057 DF PROTO=TCP SPT=48046 DPT=5327 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2169.487691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=5975 DF PROTO=TCP SPT=33442 DPT=8016 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2169.625691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=28954 DF PROTO=TCP SPT=49082 DPT=5210 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2169.759691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=48968 DF PROTO=TCP SPT=35997 DPT=5565 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2169.883691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=41963 DF PROTO=TCP SPT=35018 DPT=5900 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2170.042691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=7142 DF PROTO=TCP SPT=44239 DPT=2969 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2170.064691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=39740 DF PROTO=TCP SPT=58694 DPT=1280 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2170.150691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=45539 DF PROTO=TCP SPT=40187 DPT=9209 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2170.189691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=37872 DF PROTO=TCP SPT=57944 DPT=2857 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:31 fw-01 kernel: [ 2170.276691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=56220 DF PROTO=TCP SPT=52918 DPT=4219 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.375691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=34325 DF PROTO=TCP SPT=38708 DPT=8651 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.502691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=36407 DF PROTO=TCP SPT=52743 DPT=8529 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.656691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=27094 DF PROTO=TCP SPT=56965 DPT=6273 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.729691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=23451 DF PROTO=TCP SPT=59466 DPT=1743 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.828691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=57 ID=7231 DF PROTO=TCP SPT=52638 DPT=9984 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.848691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=115 ID=38990 DF PROTO=TCP SPT=43831 DPT=3520 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2170.949691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=26608 DF PROTO=TCP SPT=53967 DPT=474 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2171.125691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=115 ID=24664 DF PROTO=TCP SPT=54907 DPT=7600 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:32 fw-01 kernel: [ 2171.240691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=38297 DF PROTO=TCP SPT=43399 DPT=3947 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.356691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=49849 DF PROTO=TCP SPT=44440 DPT=3436 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.465691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=657 DF PROTO=TCP SPT=44570 DPT=7029 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.604691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=1517 DF PROTO=TCP SPT=56001 DPT=8324 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.762691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=50440 DF PROTO=TCP SPT=43609 DPT=8628 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.848691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=57 ID=59932 DF PROTO=TCP SPT=56021 DPT=2073 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.868691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=52 ID=3780 DF PROTO=TCP SPT=35320 DPT=8417 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2171.933691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=61286 DF PROTO=TCP SPT=53045 DPT=3462 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2172.069691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=115 ID=35164 DF PROTO=TCP SPT=49681 DPT=4435 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2172.247691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=8320 DF PROTO=TCP SPT=36310 DPT=8005 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:33 fw-01 kernel: [ 2172.325691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=59496 DF PROTO=TCP SPT=36205 DPT=2240 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2172.495691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=8974 DF PROTO=TCP SPT=47212 DPT=9157 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2172.521691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=60442 DF PROTO=TCP SPT=44925 DPT=5338 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2172.714691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=61001 DF PROTO=TCP SPT=34441 DPT=5960 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2172.813691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=41916 DF PROTO=TCP SPT=50337 DPT=6423 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2172.988691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=4490 DF PROTO=TCP SPT=47624 DPT=8728 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2173.113691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=64 ID=41654 DF PROTO=TCP SPT=53607 DPT=8833 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2173.133691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=52184 DF PROTO=TCP SPT=36987 DPT=3098 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2173.202691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=34332 DF PROTO=TCP SPT=53130 DPT=2491 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:34 fw-01 kernel: [ 2173.274691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=50002 DF PROTO=TCP SPT=59026 DPT=9942 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.369691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=48 ID=12670 DF PROTO=TCP SPT=48048 DPT=9033 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.408691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=63384 DF PROTO=TCP SPT=35215 DPT=2509 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.521691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=57 ID=36206 DF PROTO=TCP SPT=39939 DPT=2359 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.628691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=48 ID=19900 DF PROTO=TCP SPT=50431 DPT=2151 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.676691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=52 ID=30408 DF PROTO=TCP SPT=51060 DPT=9388 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.731691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=52 ID=12727 DF PROTO=TCP SPT=50865 DPT=1001 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2173.925691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=40 TOS=0x00 PREC=0x00 TTL=64 ID=16475 DF PROTO=TCP SPT=52035 DPT=566 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2174.065691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=52 ID=12299 DF PROTO=TCP SPT=57673 DPT=4594 WINDOW=1024 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2174.177691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=48 ID=59603 DF PROTO=TCP SPT=53730 DPT=4905 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2174.231691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=115 ID=3226 DF PROTO=TCP SPT=50967 DPT=2933 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:35 fw-01 kernel: [ 2174.308691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=41625 DF PROTO=TCP SPT=33883 DPT=2281 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:36 fw-01 kernel: [ 2174.366691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=52 TOS=0x00 PREC=0x00 TTL=64 ID=25730 DF PROTO=TCP SPT=58651 DPT=4384 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:50:36 fw-01 kernel: [ 2174.412691] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=198.51.100.187 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=57 ID=8097 DF PROTO=TCP SPT=41236 DPT=8853 WINDOW=64240 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 15 23:55:28 fw-01 kernel: [ 2466.572839] IPTABLES-ACCEPT: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=105.164.102.136 DST=10.0.1.10 LEN=44 TOS=0x00 PREC=0x00 TTL=64 ID=16484 DF PROTO=TCP SPT=44160 DPT=443 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "firewall",
+    "raw": "Nov 16 00:01:00 fw-01 kernel: [ 2798.638025] IPTABLES-DROP: IN=eth0 OUT= MAC=00:16:3e:5e:6c:00:00:16:3e:11:22:33:08:00 SRC=167.170.149.65 DST=10.0.1.10 LEN=60 TOS=0x00 PREC=0x00 TTL=52 ID=21351 DF PROTO=TCP SPT=49785 DPT=3389 WINDOW=29200 RES=0x00 SYN URGP=0"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:34:04 db-01 sshd[24147]: Accepted publickey for alice from 10.0.2.53 port 57642 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:34:04 db-01 sshd[48140]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:34:36 web-01 sudo[29707]: bob : TTY=pts/4 ; PWD=/home/bob ; USER=root ; COMMAND=/usr/bin/docker ps"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:37:52 web-01 sshd[62680]: Accepted password for carol from 10.0.3.132 port 37311 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:37:52 web-01 sshd[41876]: pam_unix(sshd:session): session opened for user carol(uid=1000) by (uid=0)"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:38:47 bastion sshd[38517]: Failed password for erin from 10.0.2.141 port 33599 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:31 web-01 sudo[61222]: dave : TTY=pts/3 ; PWD=/home/dave ; USER=root ; COMMAND=/usr/bin/tail -n 50 /var/log/syslog"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:40 bastion sshd[35757]: Invalid user admin from 192.0.2.46 port 33369"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:41 bastion sshd[56493]: Failed password for invalid user admin from 192.0.2.46 port 39882 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:43 bastion sshd[3725]: Invalid user oracle from 192.0.2.46 port 51531"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:44 bastion sshd[25741]: Failed password for invalid user oracle from 192.0.2.46 port 45654 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:45 bastion sshd[43008]: Invalid user pi from 192.0.2.46 port 59377"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:45 bastion sshd[11157]: Failed password for invalid user pi from 192.0.2.46 port 54452 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:47 bastion sshd[10099]: Invalid user admin from 192.0.2.46 port 35570"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:48 bastion sshd[26307]: Failed password for invalid user admin from 192.0.2.46 port 56773 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:49 bastion sshd[3525]: Invalid user oracle from 192.0.2.46 port 42939"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:50 bastion sshd[39644]: Failed password for invalid user oracle from 192.0.2.46 port 56928 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:51 bastion sshd[59711]: Invalid user test from 192.0.2.46 port 38083"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:52 bastion sshd[20152]: Failed password for invalid user test from 192.0.2.46 port 42366 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:53 bastion sshd[64550]: Invalid user postgres from 192.0.2.46 port 37159"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:54 bastion sshd[13166]: Failed password for invalid user postgres from 192.0.2.46 port 45502 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:56 bastion sshd[40511]: Failed password for root from 192.0.2.46 port 60532 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:40:58 bastion sshd[54023]: Failed password for git from 192.0.2.46 port 44422 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:00 bastion sshd[48115]: Invalid user pi from 192.0.2.46 port 38367"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:01 bastion sshd[2734]: Failed password for invalid user pi from 192.0.2.46 port 49682 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:01 bastion sshd[11543]: Invalid user pi from 192.0.2.46 port 37511"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:02 bastion sshd[25346]: Failed password for root from 192.0.2.46 port 60355 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:02 bastion sshd[58943]: Failed password for invalid user pi from 192.0.2.46 port 33699 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:03 bastion sshd[35673]: Invalid user oracle from 192.0.2.46 port 39852"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:04 bastion sshd[40088]: Failed password for invalid user oracle from 192.0.2.46 port 37821 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:05 bastion sshd[22183]: Invalid user ubuntu from 192.0.2.46 port 36250"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:06 bastion sshd[7838]: Failed password for invalid user ubuntu from 192.0.2.46 port 48646 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:07 bastion sshd[18007]: Invalid user admin from 192.0.2.46 port 45259"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:08 bastion sshd[20558]: Failed password for invalid user admin from 192.0.2.46 port 52984 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:09 bastion sshd[60404]: Invalid user postgres from 192.0.2.46 port 48312"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:10 bastion sshd[8725]: Failed password for invalid user postgres from 192.0.2.46 port 49111 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:11 bastion sshd[24306]: Invalid user test from 192.0.2.46 port 59920"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:12 bastion sshd[54230]: Failed password for invalid user test from 192.0.2.46 port 55166 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:13 bastion sshd[5324]: Invalid user postgres from 192.0.2.46 port 35472"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:14 bastion sshd[21248]: Invalid user deploy from 192.0.2.46 port 58260"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:14 bastion sshd[64727]: Failed password for invalid user postgres from 192.0.2.46 port 58295 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:15 bastion sshd[50167]: Failed password for invalid user deploy from 192.0.2.46 port 41461 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:16 bastion sshd[29150]: Invalid user ubuntu from 192.0.2.46 port 43417"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:17 bastion sshd[37603]: Failed password for invalid user ubuntu from 192.0.2.46 port 49357 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:17 bastion sshd[21357]: Invalid user deploy from 192.0.2.46 port 45975"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:18 bastion sshd[13676]: Failed password for invalid user deploy from 192.0.2.46 port 38559 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:20 bastion sshd[61076]: Invalid user test from 192.0.2.46 port 55350"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:21 bastion sshd[50530]: Failed password for invalid user test from 192.0.2.46 port 44189 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:22 bastion sshd[53441]: Failed password for git from 192.0.2.46 port 60018 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:24 bastion sshd[29745]: Invalid user test from 192.0.2.46 port 37826"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:25 bastion sshd[37930]: Failed password for invalid user test from 192.0.2.46 port 57115 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:26 bastion sshd[18339]: Invalid user ubuntu from 192.0.2.46 port 46900"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:27 bastion sshd[57605]: Invalid user oracle from 192.0.2.46 port 60331"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:27 bastion sshd[55564]: Failed password for invalid user ubuntu from 192.0.2.46 port 43547 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:28 bastion sshd[22542]: Invalid user oracle from 192.0.2.46 port 40445"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:28 bastion sshd[18076]: Failed password for invalid user oracle from 192.0.2.46 port 47331 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:29 bastion sshd[37585]: Failed password for invalid user oracle from 192.0.2.46 port 37469 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:30 bastion sshd[38443]: Invalid user oracle from 192.0.2.46 port 42384"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:31 bastion sshd[42296]: Failed password for invalid user oracle from 192.0.2.46 port 47777 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:32 bastion sshd[47754]: Failed password for root from 192.0.2.46 port 50781 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:33 bastion sshd[7026]: Failed password for git from 192.0.2.46 port 43805 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:35 bastion sshd[56332]: Invalid user deploy from 192.0.2.46 port 54991"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:36 bastion sshd[63237]: Failed password for invalid user deploy from 192.0.2.46 port 53509 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:38 bastion sshd[14556]: Invalid user pi from 192.0.2.46 port 49698"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:39 bastion sshd[23879]: Failed password for invalid user pi from 192.0.2.46 port 46675 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:40 bastion sshd[22456]: Accepted password for root from 192.0.2.46 port 54009 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:41:40 bastion sshd[4734]: pam_unix(sshd:session): session opened for user root(uid=0) by (uid=0)"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:44:11 web-01 sudo[47850]: pam_unix(sudo:auth): authentication failure; logname= uid=33 euid=0 tty=/dev/pts/1 ruser=www-data rhost=  user=www-data"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:44:17 web-01 sudo[5673]: pam_unix(sudo:auth): authentication failure; logname= uid=33 euid=0 tty=/dev/pts/1 ruser=www-data rhost=  user=www-data"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:44:22 web-01 sudo[9244]: pam_unix(sudo:auth): authentication failure; logname= uid=33 euid=0 tty=/dev/pts/1 ruser=www-data rhost=  user=www-data"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:44:25 web-01 sudo[18225]: www-data : 3 incorrect password attempts ; TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/bash"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:45:05 web-01 sudo[53489]: www-data : TTY=pts/1 ; PWD=/var/www ; USER=root ; COMMAND=/bin/bash"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:45:20 web-01 useradd[18258]: new user: name=svc_backup, UID=0, GID=0, home=/home/svc_backup, shell=/bin/bash, from=/dev/pts/1"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:49:29 web-01 sshd[64132]: Accepted password for bob from 10.0.2.77 port 46547 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:49:38 web-02 sshd[24096]: Accepted password for bob from 10.0.2.77 port 40576 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:49:47 db-01 sshd[62899]: Accepted password for bob from 10.0.2.77 port 40641 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:50:02 bastion sshd[63045]: Accepted password for bob from 10.0.2.77 port 32880 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:57:51 web-02 sshd[35731]: Accepted password for bob from 10.0.3.226 port 46706 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:57:51 web-02 sshd[27937]: pam_unix(sshd:session): session opened for user bob(uid=1000) by (uid=0)"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:59:04 db-01 sudo[1726]: erin : TTY=pts/3 ; PWD=/home/erin ; USER=root ; COMMAND=/usr/bin/systemctl restart nginx"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:59:26 db-01 sshd[46367]: Accepted publickey for alice from 10.0.3.193 port 41989 ssh2"
+  },
+  {
+    "log_source": "linux_auth",
+    "raw": "Nov 15 23:59:26 db-01 sshd[22462]: pam_unix(sshd:session): session opened for user alice(uid=1000) by (uid=0)"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:34:37.834742  [**] [1:2013028:2] ET POLICY curl User-Agent Outbound [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.3.213:41740 -> 63.230.32.41:80"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:34:47.872145  [**] [1:2100366:5] GPL ICMP_INFO PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 10.0.2.162 -> 45.255.144.250"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:38:33.456290  [**] [1:2012647:9] ET POLICY Dropbox.com Offsite File Backup in Use [**] [Classification: Potential Corporate Privacy Violation] [Priority: 1] {TCP} 10.0.2.181:42848 -> 147.198.162.135:443"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:40:39.690783  [**] [1:2001219:5] ET SCAN Potential SSH Scan [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 192.0.2.46:50683 -> 10.0.1.5:22"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:41:49.481301  [**] [1:2006446:5] ET WEB_SERVER Possible SQL Injection Attempt UNION SELECT [**] [Classification: Web Application Attack] [Priority: 1] {TCP} 198.51.100.20:48531 -> 10.0.1.10:80"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:44:33.859204  [**] [1:2100366:2] GPL ICMP_INFO PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 10.0.3.248 -> 191.85.134.51"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:48:10.557419  [**] [1:2013028:9] ET POLICY curl User-Agent Outbound [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.1.49:52142 -> 146.215.6.165:80"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:50:20.909316  [**] [1:2009582:8] ET SCAN NMAP -sS window 1024 [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 198.51.100.187:36961 -> 10.0.1.10:173"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/15-23:59:59.423585  [**] [1:2013028:1] ET POLICY curl User-Agent Outbound [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.1.34:40475 -> 170.52.155.190:80"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/16-00:00:07.993139  [**] [1:2100366:7] GPL ICMP_INFO PING *NIX [**] [Classification: Misc activity] [Priority: 3] {ICMP} 10.0.3.140 -> 212.62.104.114"
+  },
+  {
+    "log_source": "ids",
+    "raw": "11/16-00:01:01.025648  [**] [1:2013028:6] ET POLICY curl User-Agent Outbound [**] [Classification: Attempted Information Leak] [Priority: 2] {TCP} 10.0.3.173:35268 -> 7.93.107.95:80"
+  },
+  {
+    "log_source": "web",
+    "raw": "196.141.6.238 - - [15/Nov/2026:23:34:48 +0000] \"GET / HTTP/1.1\" 200 27416 \"https://shop.example.com/\" \"Mozilla/5.0 (X11; Linux x86_64; rv:1.9.5.20) Gecko/7293-07-04 05:45:39.299652 Firefox/6.0\""
+  },
+  {
+    "log_source": "web",
+    "raw": "204.51.248.103 - - [15/Nov/2026:23:38:27 +0000] \"GET /about HTTP/1.1\" 200 40902 \"-\" \"Mozilla/5.0 (iPod; U; CPU iPhone OS 3_0 like Mac OS X; vi-VN) AppleWebKit/532.50.2 (KHTML, like Gecko) Version/4.0.5 Mobile/8B118 Safari/6532.50.2\""
+  },
+  {
+    "log_source": "web",
+    "raw": "207.237.95.73 - - [15/Nov/2026:23:39:47 +0000] \"GET /index.html HTTP/1.1\" 200 30179 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_5 rv:3.0; iu-CA) AppleWebKit/534.16.1 (KHTML, like Gecko) Version/4.0.1 Safari/534.16.1\""
+  },
+  {
+    "log_source": "web",
+    "raw": "137.151.10.58 - - [15/Nov/2026:23:41:07 +0000] \"GET /products HTTP/1.1\" 200 39404 \"-\" \"Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_11_8 rv:2.0; yi-US) AppleWebKit/534.34.4 (KHTML, like Gecko) Version/4.1 Safari/534.34.4\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:13 +0000] \"GET /products?id=1'%20OR%20'1'='1 HTTP/1.1\" 200 1492 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:14 +0000] \"GET /products?id=1%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 500 2979 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:15 +0000] \"GET /products?id=1'%20OR%20'1'='1 HTTP/1.1\" 200 1590 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:15 +0000] \"GET /products?id=1'%20AND%20SLEEP(5)-- HTTP/1.1\" 200 1336 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:16 +0000] \"GET /items?cat=1%20UNION%20ALL%20SELECT%20NULL,NULL,version()-- HTTP/1.1\" 500 2514 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:18 +0000] \"GET /products?id=1;%20DROP%20TABLE%20users-- HTTP/1.1\" 200 1765 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:20 +0000] \"GET /products?id=-1'%20UNION%20SELECT%201,2,3-- HTTP/1.1\" 403 3126 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:21 +0000] \"GET /products?id=1'%20AND%20SLEEP(5)-- HTTP/1.1\" 500 1126 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:22 +0000] \"GET /search?q='%20OR%201=1# HTTP/1.1\" 500 3566 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:23 +0000] \"GET /products?id=1%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 200 2075 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:24 +0000] \"GET /products?id=1'%20OR%20'1'='1 HTTP/1.1\" 200 2235 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:24 +0000] \"GET /products?id=-1'%20UNION%20SELECT%201,2,3-- HTTP/1.1\" 403 792 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:26 +0000] \"GET /products?id=1'%20AND%20SLEEP(5)-- HTTP/1.1\" 200 1382 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:26 +0000] \"GET /items?cat=1%20UNION%20ALL%20SELECT%20NULL,NULL,version()-- HTTP/1.1\" 500 2943 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:27 +0000] \"GET /products?id=1;%20DROP%20TABLE%20users-- HTTP/1.1\" 403 3105 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:27 +0000] \"GET /products?id=1'%20OR%20'1'='1 HTTP/1.1\" 403 1738 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:27 +0000] \"GET /login?user=admin'--&pass=x HTTP/1.1\" 500 3172 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:29 +0000] \"GET /login?user=admin'--&pass=x HTTP/1.1\" 500 3375 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:30 +0000] \"GET /items?cat=1%20UNION%20ALL%20SELECT%20NULL,NULL,version()-- HTTP/1.1\" 403 2578 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:31 +0000] \"GET /products?id=1%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 403 1839 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:32 +0000] \"GET /products?id=1;%20DROP%20TABLE%20users-- HTTP/1.1\" 403 1372 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:34 +0000] \"GET /products?id=1;%20DROP%20TABLE%20users-- HTTP/1.1\" 500 2552 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:34 +0000] \"GET /products?id=1;%20DROP%20TABLE%20users-- HTTP/1.1\" 500 1064 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:35 +0000] \"GET /login?user=admin'--&pass=x HTTP/1.1\" 500 3256 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:36 +0000] \"GET /search?q='%20OR%201=1# HTTP/1.1\" 403 2210 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:38 +0000] \"GET /products?id=1'%20OR%20'1'='1 HTTP/1.1\" 500 3799 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:40 +0000] \"GET /search?q='%20OR%201=1# HTTP/1.1\" 200 2883 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:40 +0000] \"GET /products?id=-1'%20UNION%20SELECT%201,2,3-- HTTP/1.1\" 500 3148 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:42 +0000] \"GET /items?cat=1%20UNION%20ALL%20SELECT%20NULL,NULL,version()-- HTTP/1.1\" 403 3350 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:43 +0000] \"GET /products?id=1%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 200 3163 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:44 +0000] \"GET /products?id=1%20UNION%20SELECT%20username,password%20FROM%20users-- HTTP/1.1\" 200 2436 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:46 +0000] \"GET /products?id=1;%20DROP%20TABLE%20users-- HTTP/1.1\" 500 3617 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:47 +0000] \"GET /products?id=1'%20AND%20SLEEP(5)-- HTTP/1.1\" 500 1386 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:48 +0000] \"GET /search?q='%20OR%201=1# HTTP/1.1\" 200 3083 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "198.51.100.20 - - [15/Nov/2026:23:41:49 +0000] \"GET /login?user=admin'--&pass=x HTTP/1.1\" 500 3479 \"-\" \"sqlmap/1.8.4#stable (https://sqlmap.org)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "27.205.147.50 - - [15/Nov/2026:23:45:23 +0000] \"GET /contact HTTP/1.1\" 200 26542 \"https://shop.example.com/\" \"Mozilla/5.0 (compatible; MSIE 8.0; Windows NT 5.01; Trident/3.1)\""
+  },
+  {
+    "log_source": "web",
+    "raw": "176.211.70.13 - - [15/Nov/2026:23:51:36 +0000] \"GET /products?id=12 HTTP/1.1\" 200 37980 \"https://shop.example.com/\" \"Mozilla/5.0 (Windows NT 10.0) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/23.0.819.0 Safari/535.1\""
+  },
+  {
+    "log_source": "web",
+    "raw": "19.21.245.234 - - [15/Nov/2026:23:59:33 +0000] \"GET /favicon.ico HTTP/1.1\" 302 15437 \"https://shop.example.com/\" \"Opera/8.92.(Windows 98; wo-SN) Presto/2.9.184 Version/11.00\""
+  },
+  {
+    "log_source": "web",
+    "raw": "154.82.234.181 - - [15/Nov/2026:23:59:38 +0000] \"GET /products HTTP/1.1\" 200 29960 \"https://shop.example.com/\" \"Mozilla/5.0 (Macintosh; U; PPC Mac OS X 10_7_9; rv:1.9.6.20) Gecko/2746-06-06 10:05:00.789291 Firefox/3.6.15\""
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:35:45Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"2950e9ae-5089-4e3b-ae8b-9e7c4a815857\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:35:48Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"038d04fb-1018-47f5-8191-590c42c79c1c\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:35:51Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"e7a82c20-e5e6-4f0c-9dd2-84e869616452\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:00Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"f72699ec-6a1e-460d-81cd-81b0c6db0211\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:03Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"3c37bb01-18b0-410e-8eab-f94903f33851\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:06Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"1807dfaf-1f7e-4273-8f56-d48f05e1ddfb\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:12Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"fcf2c86d-9394-4318-8fa9-60d1af925385\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:16Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"50a22a1b-59ad-4533-9b81-3e24efa4f9f1\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:22Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"a02fb007-9b75-4151-b4bf-589bc79e23da\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:29Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"09bb1454-9d7a-41cb-b6d6-e11fa79b8a2e\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:32Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Failure\"},\"eventID\":\"9b97d72a-50e9-4d6d-a779-082cecbc0534\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:36:52Z\",\"eventSource\":\"signin.amazonaws.com\",\"eventName\":\"ConsoleLogin\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":null,\"responseElements\":{\"ConsoleLogin\":\"Success\"},\"eventID\":\"6d1675c1-7671-47fd-9814-26123733ef91\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:37:18Z\",\"eventSource\":\"iam.amazonaws.com\",\"eventName\":\"CreateUser\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":{\"userName\":\"support-automation\"},\"responseElements\":null,\"eventID\":\"1e93a2fb-e0df-484e-ad09-0b97faa7176f\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:37:40Z\",\"eventSource\":\"iam.amazonaws.com\",\"eventName\":\"AttachUserPolicy\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":{\"userName\":\"support-automation\",\"policyArn\":\"arn:aws:iam::aws:policy/AdministratorAccess\"},\"responseElements\":null,\"eventID\":\"8052b13c-dc7e-451e-9fc8-16f4afbc11c4\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"bob\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/bob\"},\"eventTime\":\"2026-11-15T23:38:12Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"GetCallerIdentity\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.2.179\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"92845dae-afe9-47c1-8fdf-66145a091fd6\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"carol\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/carol\"},\"eventTime\":\"2026-11-15T23:38:15Z\",\"eventSource\":\"iam.amazonaws.com\",\"eventName\":\"CreateAccessKey\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"203.0.113.203\",\"userAgent\":\"Mozilla/5.0 (X11; Linux x86_64; rv:126.0) Gecko/20100101 Firefox/126.0\",\"requestParameters\":{\"userName\":\"support-automation\"},\"responseElements\":null,\"eventID\":\"40676334-ec79-43be-b96a-fc60ae7078ea\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"alice\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/alice\"},\"eventTime\":\"2026-11-15T23:39:51Z\",\"eventSource\":\"s3.amazonaws.com\",\"eventName\":\"ListBuckets\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.2.12\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"7f9ac098-8df0-4f25-95f1-9a51e41686cd\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"alice\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/alice\"},\"eventTime\":\"2026-11-15T23:47:22Z\",\"eventSource\":\"sts.amazonaws.com\",\"eventName\":\"GetCallerIdentity\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.3.56\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"ced8c284-63f1-4bbc-a97b-65cb81f8c04a\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"alice\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/alice\"},\"eventTime\":\"2026-11-15T23:52:08Z\",\"eventSource\":\"iam.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.3.89\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"a341738c-837a-4935-bef7-e268ffe976ab\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"alice\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/alice\"},\"eventTime\":\"2026-11-15T23:52:21Z\",\"eventSource\":\"iam.amazonaws.com\",\"eventName\":\"ListUsers\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.3.112\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"f6540600-c8fb-4456-b76d-c0c3b07822db\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"frank\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/frank\"},\"eventTime\":\"2026-11-15T23:54:25Z\",\"eventSource\":\"ec2.amazonaws.com\",\"eventName\":\"DescribeInstances\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.3.170\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"ee532f03-8b75-402a-a5f2-74190b94a014\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"dave\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/dave\"},\"eventTime\":\"2026-11-15T23:56:51Z\",\"eventSource\":\"ec2.amazonaws.com\",\"eventName\":\"DescribeInstances\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.2.101\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"5044df5c-81b2-499e-9b37-ca07a14d59fc\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "cloudtrail",
+    "raw": "{\"eventVersion\":\"1.08\",\"userIdentity\":{\"type\":\"IAMUser\",\"userName\":\"frank\",\"accountId\":\"123456789012\",\"arn\":\"arn:aws:iam::123456789012:user/frank\"},\"eventTime\":\"2026-11-15T23:59:43Z\",\"eventSource\":\"logs.amazonaws.com\",\"eventName\":\"DescribeLogGroups\",\"awsRegion\":\"eu-west-3\",\"sourceIPAddress\":\"52.47.3.203\",\"userAgent\":\"aws-cli/2.15.30\",\"requestParameters\":null,\"responseElements\":null,\"eventID\":\"fa97002c-fcba-4167-b5a9-ca5fedf165da\",\"eventType\":\"AwsApiCall\",\"recipientAccountId\":\"123456789012\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:39.972544Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"alice\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"53022\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:41.768428Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"bob\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"57514\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:44.223516Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"carol\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"33017\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:37:45.789389Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"LogonType\":10,\"TargetUserName\":\"bob\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.3.143\",\"IpPort\":\"54738\",\"WorkstationName\":\"WS-BOB\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:47.308742Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"32782\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:48.052033Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"erin\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"33289\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4740,\"TimeCreated\":\"2026-11-15T23:37:48.252033Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"erin\",\"TargetDomainName\":\"KALI\",\"SubjectUserName\":\"WIN-DC01$\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:51.982557Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"frank\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"34174\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:54.674589Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"alice\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"53566\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:55.633325Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"bob\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"33457\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:57.846724Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"carol\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"57978\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:37:58.408622Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"36314\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:00.461526Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"erin\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"34435\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4740,\"TimeCreated\":\"2026-11-15T23:38:00.661526Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"erin\",\"TargetDomainName\":\"KALI\",\"SubjectUserName\":\"WIN-DC01$\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:01.657155Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"frank\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"59099\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:04.237439Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"alice\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"48914\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:05.440306Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"bob\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"39939\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:06.076073Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"carol\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"47611\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:06.691151Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"33953\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:08.282390Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"erin\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"49268\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4740,\"TimeCreated\":\"2026-11-15T23:38:08.482390Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"erin\",\"TargetDomainName\":\"KALI\",\"SubjectUserName\":\"WIN-DC01$\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:38:10.453469Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"frank\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"55504\",\"Status\":\"0xc000006d\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:38:13.525968Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"LogonType\":2,\"TargetUserName\":\"erin\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.1.83\",\"IpPort\":\"59531\",\"WorkstationName\":\"WS-ERIN\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:38:15.453469Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"LogonType\":3,\"IpAddress\":\"198.51.100.4\",\"IpPort\":\"50104\",\"WorkstationName\":\"KALI\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4672,\"TimeCreated\":\"2026-11-15T23:38:15.483469Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"SubjectUserName\":\"dave\",\"SubjectDomainName\":\"CORP\",\"PrivilegeList\":\"SeDebugPrivilege SeBackupPrivilege SeTakeOwnershipPrivilege\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4720,\"TimeCreated\":\"2026-11-15T23:39:00.453469Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"TargetUserName\":\"helpdesk2\",\"TargetDomainName\":\"CORP\",\"SubjectUserName\":\"dave\",\"SubjectDomainName\":\"CORP\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4625,\"TimeCreated\":\"2026-11-15T23:39:42.844879Z\",\"Computer\":\"WIN-FS02.corp.local\",\"Channel\":\"Security\",\"LogonType\":3,\"Status\":\"0xc000006d\",\"TargetUserName\":\"alice\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.2.91\",\"IpPort\":\"51957\",\"WorkstationName\":\"WS-ALICE\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:48:50.215535Z\",\"Computer\":\"WIN-WS113.corp.local\",\"Channel\":\"Security\",\"LogonType\":3,\"TargetUserName\":\"bob\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.1.176\",\"IpPort\":\"59761\",\"WorkstationName\":\"WS-BOB\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4648,\"TimeCreated\":\"2026-11-15T23:50:18.428682Z\",\"Computer\":\"WIN-WS113.corp.local\",\"Channel\":\"Security\",\"SubjectUserName\":\"bob\",\"TargetUserName\":\"Administrator\",\"TargetServerName\":\"WIN-DC01\",\"IpAddress\":\"10.0.2.77\",\"IpPort\":\"35600\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4648,\"TimeCreated\":\"2026-11-15T23:50:36.565458Z\",\"Computer\":\"WIN-WS113.corp.local\",\"Channel\":\"Security\",\"SubjectUserName\":\"bob\",\"TargetUserName\":\"Administrator\",\"TargetServerName\":\"WIN-FS02\",\"IpAddress\":\"10.0.2.77\",\"IpPort\":\"48907\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4648,\"TimeCreated\":\"2026-11-15T23:50:43.044179Z\",\"Computer\":\"WIN-WS113.corp.local\",\"Channel\":\"Security\",\"SubjectUserName\":\"bob\",\"TargetUserName\":\"Administrator\",\"TargetServerName\":\"WIN-WS113\",\"IpAddress\":\"10.0.2.77\",\"IpPort\":\"44285\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:55:05.815403Z\",\"Computer\":\"WIN-WS113.corp.local\",\"Channel\":\"Security\",\"LogonType\":2,\"TargetUserName\":\"frank\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.1.139\",\"IpPort\":\"43042\",\"WorkstationName\":\"WS-FRANK\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:57:04.127333Z\",\"Computer\":\"WIN-FS02.corp.local\",\"Channel\":\"Security\",\"LogonType\":3,\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.1.98\",\"IpPort\":\"38492\",\"WorkstationName\":\"WS-DAVE\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:59:47.528727Z\",\"Computer\":\"WIN-DC01.corp.local\",\"Channel\":\"Security\",\"LogonType\":2,\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.1.223\",\"IpPort\":\"44139\",\"WorkstationName\":\"WS-DAVE\"}"
+  },
+  {
+    "log_source": "windows_event",
+    "raw": "{\"EventID\":4624,\"TimeCreated\":\"2026-11-15T23:59:59.127391Z\",\"Computer\":\"WIN-WS113.corp.local\",\"Channel\":\"Security\",\"LogonType\":3,\"TargetUserName\":\"dave\",\"TargetDomainName\":\"CORP\",\"IpAddress\":\"10.0.2.250\",\"IpPort\":\"34874\",\"WorkstationName\":\"WS-DAVE\"}"
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:46:10.143Z web-01 postfix/smtpd 2923 - - connect from mail.example.org[10.0.3.108]"
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:47:40.461Z db-01 postfix/smtpd 2719 - - connect from mail.example.org[10.0.3.203]"
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:48:07.347Z db-01 systemd 2472 - - Started Daily apt download activities."
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:50:23.818Z web-02 systemd 8768 - - Started Daily apt download activities."
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:55:06.233Z bastion nginx 8895 - - worker process 103 exited with code 0"
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:55:15.971Z web-01 kernel 5052 - - usb 1-1: new high-speed USB device number 214 using xhci_hcd"
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-15T23:55:26.401Z bastion dhclient 914 - - DHCPACK of 10.0.1.205 from 10.0.1.1"
+  },
+  {
+    "log_source": "syslog",
+    "raw": "<30>1 2026-11-16T00:00:15.364Z db-01 postfix/smtpd 5082 - - connect from mail.example.org[10.0.3.101]"
+  }
+]

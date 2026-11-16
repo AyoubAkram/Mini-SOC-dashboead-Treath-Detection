@@ -4,10 +4,13 @@ from pathlib import Path
 
 # Add backend to path to import ingestion module
 sys.path.insert(0, str(Path(__file__).parent.parent))
-from backend.ingestion import ingest_log
+from backend.ingestion import JOURNALD, LogBatcher
+
+# Lines are buffered and ingested in batches (one integrity hash per batch)
+batcher = LogBatcher(JOURNALD)
 
 def parser(Line):
-    print(Line)
+    batcher.add(Line)
 
 def liveJournalLogs ():
     process = subprocess.Popen(['journalctl', '-f', '-o', 'json'], stdout=subprocess.PIPE, text=True)
@@ -36,7 +39,12 @@ def ServicesFilter (ServiceName):
 
         
 def main():
-    liveJournalLogs()
+    try:
+        liveJournalLogs()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        batcher.close()
     
 if __name__ == "__main__":
     main()

@@ -1,72 +1,107 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import {
+  Alert, AlertsResponse, TimeRange, buildUrl, formatDateTime, formatNumber, setAlertStatus, useApi
+} from '../api';
 import '../styles/alerts.css';
 
-const Alerts = () => {
-  // TODO: Connect to backend API for real alert data
-  // TODO: Add sorting, filtering, and pagination
-  const [selectedAlerts, setSelectedAlerts] = useState<number[]>([]);
+interface AlertsProps {
+  timeRange: TimeRange;
+  refreshKey: number;
+  onChange: () => void;
+}
 
-  const alerts = [
-    {
-      id: 1,
-      timestamp: '2024-01-15 14:35:22',
-      severity: 'critical',
-      type: 'SQL Injection',
-      source: '192.168.1.105',
-      destination: '10.0.1.50:3306',
-      description: 'Detected SQL injection pattern in HTTP request',
-      status: 'open'
-    },
-    {
-      id: 2,
-      timestamp: '2024-01-15 14:28:15',
-      severity: 'high',
-      type: 'Port Scan',
-      source: '203.45.67.89',
-      destination: '10.0.0.0/24',
-      description: 'Systematic port scanning detected',
-      status: 'open'
-    },
-    {
-      id: 3,
-      timestamp: '2024-01-15 14:15:42',
-      severity: 'high',
-      type: 'Brute Force',
-      source: '198.51.100.42',
-      destination: '10.0.2.15:22',
-      description: 'Multiple failed SSH login attempts',
-      status: 'investigating'
-    },
-    {
-      id: 4,
-      timestamp: '2024-01-15 13:55:08',
-      severity: 'medium',
-      type: 'Anomalous Traffic',
-      source: '10.0.3.200',
-      destination: '8.8.8.8:53',
-      description: 'Unusual DNS query pattern detected',
-      status: 'investigating'
-    },
-    {
-      id: 5,
-      timestamp: '2024-01-15 13:42:31',
-      severity: 'low',
-      type: 'Policy Violation',
-      source: '10.0.1.120',
-      destination: '*.torrent.site',
-      description: 'Access to restricted website detected',
-      status: 'resolved'
+const PAGE_SIZE = 10;
+
+// Filter dropdown value -> query parameters of GET /api/alerts
+const FILTERS: Record<string, { label: string; severity?: string; status?: string }> = {
+  all: { label: 'All Alerts' },
+  unresolved: { label: 'Unresolved', status: 'unresolved' },
+  critical: { label: 'Critical Only', severity: 'critical' },
+  high: { label: 'High Only', severity: 'high' },
+  medium: { label: 'Medium Only', severity: 'medium' },
+  resolved: { label: 'Resolved', status: 'resolved' }
+};
+
+const csvCell = (value: string | null): string => `"${String(value ?? '').replace(/"/g, '""')}"`;
+
+const Alerts = ({ timeRange, refreshKey, onChange }: AlertsProps) => {
+  const [selectedAlerts, setSelectedAlerts] = useState<string[]>([]);
+  const [searchText, setSearchText] = useState<string>('');
+  const [search, setSearch] = useState<string>('');
+  const [filter, setFilter] = useState<string>('all');
+  const [page, setPage] = useState<number>(0);
+  const [actionError, setActionError] = useState<string | null>(null);
+
+  // Wait until the user stops typing before querying
+  useEffect(() => {
+    const timer = setTimeout(() => setSearch(searchText.trim()), 300);
+    return () => clearTimeout(timer);
+  }, [searchText]);
+
+  // A new query starts again from the first page
+  useEffect(() => {
+    setPage(0);
+    setSelectedAlerts([]);
+  }, [search, filter, timeRange]);
+
+  const url = buildUrl('/api/alerts', {
+    limit: PAGE_SIZE,
+    offset: page * PAGE_SIZE,
+    time_range: timeRange,
+    severity: FILTERS[filter].severity,
+    status: FILTERS[filter].status,
+    search
+  });
+  const { data, error, loading } = useApi<AlertsResponse>(url, refreshKey);
+  const alerts: Alert[] = data?.alerts ?? [];
+  const total = data?.total ?? 0;
+  const first = total === 0 ? 0 : page * PAGE_SIZE + 1;
+  const last = Math.min((page + 1) * PAGE_SIZE, total);
+  const pageIds = alerts.map((alert) => alert.id);
+  const allSelected = pageIds.length > 0 && pageIds.every((id) => selectedAlerts.includes(id));
+
+  // Resolving alerts can leave the current page empty
+  useEffect(() => {
+    if (data && page > 0 && page * PAGE_SIZE >= data.total) {
+      setPage(Math.max(Math.ceil(data.total / PAGE_SIZE) - 1, 0));
     }
-  ];
+  }, [data, page]);
 
-  // TODO: Implement actual toggle functionality
-  const toggleAlert = (id: number) => {
+  const toggleAlert = (id: string) => {
     setSelectedAlerts(prev =>
       prev.includes(id) ? prev.filter(a => a !== id) : [...prev, id]
     );
   };
 
-  // TODO: Implement bulk actions (acknowledge, resolve, assign)
+  const toggleAll = () => {
+    setSelectedAlerts(allSelected ? [] : pageIds);
+  };
+
+  const updateStatus = async (ids: string[], action: 'acknowledge' | 'resolve' | 'reopen') => {
+    try {
+      await Promise.all(ids.map((id) => setAlertStatus(id, action)));
+      setActionError(null);
+      setSelectedAlerts(prev => prev.filter((id) => !ids.includes(id)));
+    } catch (err) {
+      setActionError((err as Error).message);
+    }
+    onChange();
+  };
+
+  const exportCsv = () => {
+    const header = ['timestamp', 'severity', 'type', 'source', 'destination', 'username', 'description', 'status'];
+    const rows = alerts.map((alert) => [
+      alert.timestamp, alert.severity, alert.type, alert.source, alert.destination,
+      alert.username, alert.description, alert.status
+    ].map(csvCell).join(','));
+    const blob = new Blob([[header.join(','), ...rows].join('\n')], { type: 'text/csv' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'alerts.csv';
+    link.click();
+    URL.revokeObjectURL(link.href);
+  };
+
   const getSeverityColor = (severity: string): string => {
     const colors: Record<string, string> = {
       critical: '#ff3333',
@@ -91,33 +126,53 @@ const Alerts = () => {
       <div className="alerts-header">
         <h2>🔔 Recent Security Alerts</h2>
         <div className="alerts-controls">
-          {/* TODO: Add search functionality */}
-          <input 
-            type="text" 
-            placeholder="Search alerts..." 
+          {selectedAlerts.length > 0 && (
+            <>
+              <button className="btn-secondary" onClick={() => updateStatus(selectedAlerts, 'acknowledge')}>
+                Acknowledge ({selectedAlerts.length})
+              </button>
+              <button className="btn-secondary" onClick={() => updateStatus(selectedAlerts, 'resolve')}>
+                Resolve ({selectedAlerts.length})
+              </button>
+            </>
+          )}
+          <input
+            type="text"
+            placeholder="Search alerts..."
             className="search-input"
-            disabled
+            value={searchText}
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => setSearchText(e.target.value)}
           />
-          {/* TODO: Add more filter options */}
-          <select className="filter-select" disabled>
-            <option>All Alerts</option>
-            <option>Critical Only</option>
-            <option>Unresolved</option>
+          <select
+            className="filter-select"
+            value={filter}
+            onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setFilter(e.target.value)}
+          >
+            {Object.entries(FILTERS).map(([key, item]) => (
+              <option key={key} value={key}>{item.label}</option>
+            ))}
           </select>
-          {/* TODO: Add export functionality */}
-          <button className="btn-secondary" disabled>
+          <button className="btn-secondary" onClick={exportCsv} disabled={alerts.length === 0}>
             Export
           </button>
         </div>
       </div>
+
+      {(error || actionError) && (
+        <div className="data-message error">Could not reach the API: {error || actionError}</div>
+      )}
 
       <div className="alerts-table-wrapper">
         <table className="alerts-table">
           <thead>
             <tr>
               <th style={{width: '40px'}}>
-                {/* TODO: Add select-all functionality */}
-                <input type="checkbox" disabled />
+                <input
+                  type="checkbox"
+                  checked={allSelected}
+                  onChange={toggleAll}
+                  disabled={alerts.length === 0}
+                />
               </th>
               <th>Timestamp</th>
               <th>Severity</th>
@@ -133,15 +188,15 @@ const Alerts = () => {
             {alerts.map((alert) => (
               <tr key={alert.id} className={`alert-row severity-${alert.severity}`}>
                 <td>
-                  <input 
+                  <input
                     type="checkbox"
                     checked={selectedAlerts.includes(alert.id)}
                     onChange={() => toggleAlert(alert.id)}
                   />
                 </td>
-                <td className="timestamp">{alert.timestamp}</td>
+                <td className="timestamp">{formatDateTime(alert.timestamp)}</td>
                 <td>
-                  <span 
+                  <span
                     className="severity-badge"
                     style={{backgroundColor: getSeverityColor(alert.severity)}}
                   >
@@ -160,29 +215,49 @@ const Alerts = () => {
                   </span>
                 </td>
                 <td className="actions">
-                  {/* TODO: Add action handlers for investigate, acknowledge, resolve */}
-                  <button className="btn-action-sm" title="Investigate">
-                    🔍
-                  </button>
-                  <button className="btn-action-sm" title="Acknowledge">
-                    ✓
-                  </button>
-                  <button className="btn-action-sm" title="More options">
-                    ⋮
-                  </button>
+                  {alert.status === 'open' && (
+                    <button
+                      className="btn-action-sm"
+                      title="Acknowledge and investigate"
+                      onClick={() => updateStatus([alert.id], 'acknowledge')}
+                    >
+                      🔍
+                    </button>
+                  )}
+                  {alert.status !== 'resolved' ? (
+                    <button
+                      className="btn-action-sm"
+                      title="Resolve"
+                      onClick={() => updateStatus([alert.id], 'resolve')}
+                    >
+                      ✓
+                    </button>
+                  ) : (
+                    <button
+                      className="btn-action-sm"
+                      title="Reopen"
+                      onClick={() => updateStatus([alert.id], 'reopen')}
+                    >
+                      ↺
+                    </button>
+                  )}
                 </td>
               </tr>
             ))}
           </tbody>
         </table>
+        {alerts.length === 0 && !error && (
+          <div className="data-message">
+            {loading ? 'Loading alerts...' : 'No alerts match this time range and filter.'}
+          </div>
+        )}
       </div>
 
-      {/* TODO: Add pagination component */}
       <div className="alerts-pagination">
-        <span>Showing 1-5 of 247 alerts</span>
+        <span>Showing {first}-{last} of {formatNumber(total)} alerts</span>
         <div className="pagination-controls">
-          <button disabled>← Previous</button>
-          <button>Next →</button>
+          <button disabled={page === 0} onClick={() => setPage(page - 1)}>← Previous</button>
+          <button disabled={last >= total} onClick={() => setPage(page + 1)}>Next →</button>
         </div>
       </div>
     </div>
